@@ -186,7 +186,7 @@
   <header class="bar">
     <div class="brand">
       <h1>SDOH City Walk</h1>
-      <span class="tag">Virtual Tour · 360°</span>
+      <span class="tag">Virtual Tour</span>
     </div>
     <div class="prog">
       <span class="count">COLLECTED <b id="cCount">00</b>/12</span>
@@ -240,7 +240,7 @@
     <div class="k">Tour complete · 12 / 12</div>
     <h2>You've mapped the city</h2>
     <p>These twelve rarely act alone — they stack. Income shapes housing shapes stress shapes coping. That's the framework: health is built (or eroded) by the conditions around a person, long before any "choice."</p>
-    <p style="color:var(--paper)"><b>Take it to your Casebook:</b> open your persona. Which two determinants weigh heaviest on them — and which single change would lift the most?</p>
+    <p style="color:var(--paper)"><b>Take it to your Casebook:</b> open your persona. Which two determinants weigh heaviest on them and which single change would help the most?</p>
     <button class="cta" id="winClose">Walk it again</button>
   </div>
 </div>
@@ -249,16 +249,16 @@
 const STOPS = [
  {no:1, place:"First & Main", det:"Income & social status",
   see:"A glass bank tower throws its shadow over a tired walk-up across the street.",
-  means:"Income and social position are the strongest determinant of health. They set your access to safe housing, good food, and time — and how much chronic stress you carry.",
-  why:"Same substance, same dose: savings, stable housing, and a network cushion the risk. Poverty strips those buffers, so harm lands harder and recovery is steeper.",
+  means:"Income and social position are the strongest determinant of health. They set your access to safe housing, good food, social activities and how much chronic stress you carry.",
+  why:"Savings, stable housing, and a network cushion the risk. Poverty strips those buffers, so harm lands harder and recovery is steeper.",
   q:"Two people use the same drug the same way. Why does harm often fall harder on the lower-income person?",
-  opts:["Their body processes it differently","They have fewer buffers — housing, money, support — to absorb a setback","They simply use less willpower"], correct:1,
-  fb:"Right — income buys buffers (housing, care, time), not different biology.",
+  opts:["Their body processes it differently","They have fewer buffers: housing, money, support to absorb a setback","They simply use less willpower"], correct:1,
+  fb:"Right income buys buffers (housing, care, time), not different biology.",
   sky:["#1b2a4e","#3a5480"], accent:"#ffb454"},
 
  {no:2, place:"The Job Site", det:"Employment & working conditions",
   see:"A construction crane swings over a 24-hour diner where the night shift refuels.",
-  means:"Whether you have work — and whether it's secure, safe, and fair — shapes health. Precarious, dangerous, or high-stress jobs raise risk; losing work removes structure and coverage.",
+  means:"Whether you have work and whether it's secure, safe, and fair shapes health. Precarious, dangerous, or high-stress jobs raise risk; losing work removes structure and coverage.",
   why:"A back injury becomes a prescribed-opioid start; rotating night shifts feed stimulant and alcohol use; a layoff strips the routine and benefits that hold recovery together.",
   q:"Which of these is a working-conditions health risk?",
   opts:["A salaried role with benefits","Unpredictable shifts with no sick pay","A short commute"], correct:1,
@@ -266,26 +266,26 @@ const STOPS = [
   sky:["#3a2a4d","#7d4a63"], accent:"#ff9e6d"},
 
  {no:3, place:"Riverside Library", det:"Education & literacy",
-  see:"Kids spill out of a school beside a public library with a hand-lettered 'free wifi' sign.",
-  means:"Education shapes job options, income, and health literacy — the ability to understand risks and navigate services.",
+  see:"Kids spill out of a school beside a public library with a hand-lettered 'free afterschool tutoring' sign.",
+  means:"Education shapes job options, income, and health literacy. This gives people the ability to understand risks and navigate services.",
   why:"Lower health literacy makes it harder to read harm-reduction info, find treatment, or push back when a system brushes you off.",
   q:"How does education act on health here?",
   opts:["Only through exam scores","Through job options, income, and the skills to navigate care","It doesn't, really"], correct:1,
-  fb:"Education works upstream — on income, options, and navigating the system.",
+  fb:"Education works upstream, on income, options, and navigating the system.",
   sky:["#2b3646","#52627a"], accent:"#7fd7c8"},
 
  {no:4, place:"Sunnyside Playground", det:"Childhood experiences",
   see:"An empty swing set beside a daycare with a two-year waitlist taped to the door.",
-  means:"The early years set lifelong trajectories. Adverse childhood experiences (ACEs) — abuse, neglect, instability — leave a long shadow.",
+  means:"The early years set lifelong trajectories. Adverse childhood experiences (ACEs) abuse, neglect, instability can leave a long shadow.",
   why:"Childhood trauma is one of the strongest predictors of later substance use. For many, using is a way to cope with pain that was never resolved.",
   q:"Why are ACEs relevant to substance use?",
   opts:["They switch on a specific gene","Unresolved early trauma is a powerful driver of later use","They aren't relevant"], correct:1,
-  fb:"ACEs are among the strongest predictors — trauma drives coping.",
+  fb:"ACEs are among the strongest predictors, trauma drives coping.",
   sky:["#101a33","#26375a"], accent:"#ffd27f"},
 
  {no:5, place:"Maple Court Apartments", det:"Physical environment & housing",
   see:"A boarded window, a dead buzzer, and a 'no vacancy' sign over a crowded block.",
-  means:"Safe, stable, affordable housing — plus clean air and water and a walkable neighbourhood — is foundational to health.",
+  means:"Safe, stable, affordable housing, plus clean air and water and a walkable neighbourhood is foundational to health.",
   why:"Without stable housing, using is riskier (often alone, in unsafe spots) and recovery is nearly impossible. 'Housing First' works because the housing comes first.",
   q:"Why does 'Housing First' put housing before treatment?",
   opts:["It's cheaper to build","Stability is the ground recovery stands on","It replaces treatment entirely"], correct:1,
@@ -295,7 +295,7 @@ const STOPS = [
  {no:6, place:"Corner Community Café", det:"Social supports & coping",
   see:"A community board thick with flyers; inside, a peer-support group shares a long table.",
   means:"Family, friends, and community connection buffer stress and carry people through hard stretches.",
-  why:"Isolation raises overdose risk — no one there to respond — while strong networks and peer support protect health and sustain recovery.",
+  why:"Isolation raises overdose risk with no one there to respond. While strong networks and peer support protect health and sustain recovery.",
   q:"How does isolation raise overdose risk specifically?",
   opts:["It changes the drug's potency","No one is present to notice or respond","It doesn't"], correct:1,
   fb:"Alone, there's no one to respond — connection is protective.",
@@ -303,7 +303,7 @@ const STOPS = [
 
  {no:7, place:"Eastside Rec & Grocer", det:"Healthy behaviours",
   see:"A rec centre with a padlocked gate sits next to a corner store stocked with chips, not produce.",
-  means:"Day-to-day choices — food, activity, substance use — matter, but they're shaped by everything around them, not pure willpower.",
+  means:"Day-to-day choices, food, activity, substance use it matters, but they're shaped by everything around them, not pure willpower.",
   why:"'Just choose better' ignores the setting: a food desert, nowhere safe to move, and chronic stress narrow the choices available in the first place.",
   q:"What's the catch with framing health as personal 'choices'?",
   opts:["Choices don't matter at all","The other determinants shape which choices are even available","Willpower is all that matters"], correct:1,
@@ -313,7 +313,7 @@ const STOPS = [
  {no:8, place:"Downtown Clinic", det:"Access to health services",
   see:"A clinic with a three-month waitlist taped to the glass; the pharmacy closed at five.",
   means:"Health depends on getting timely, affordable, non-judgmental care when you actually need it.",
-  why:"Waits, distance, cost, stigma, and criminalization all block treatment and harm reduction — the help exists, but people can't reach it.",
+  why:"Waits, distance, cost, stigma, and criminalization all block treatment and harm reduction. The help may exist, but people can't reach it.",
   q:"Which of these is an access barrier (not a treatment)?",
   opts:["Methadone","A three-month waitlist and no evening hours","A counsellor"], correct:1,
   fb:"Access barriers are the obstacle course between wanting help and getting it.",
@@ -321,7 +321,7 @@ const STOPS = [
 
  {no:9, place:"General Hospital", det:"Biology & genetics",
   see:"An ambulance idles in the bay; upstairs, a family history is being taken on an intake form.",
-  means:"Genes and biology influence how susceptible you are — but they set odds, not destiny.",
+  means:"Genes and biology influence how susceptible you are, but they set odds, not destiny.",
   why:"A family history raises addiction risk, yet whether it's ever expressed depends heavily on environment and the other determinants.",
   q:"How should we read 'genetic risk' for addiction?",
   opts:["It guarantees addiction","It shifts the odds; environment shapes the outcome","It's irrelevant"], correct:1,
@@ -329,9 +329,9 @@ const STOPS = [
   sky:["#1d2735","#3a4c63"], accent:"#cbe36a"},
 
  {no:10, place:"Westgate Health Centre", det:"Gender",
-  see:"A women's-health sign; a poster reads 'asking for help won't cost you your kids.'",
+  see:"A women's-health sign; a poster reads 'asking for help won't cost you and your kids.'",
   means:"Gender norms and inequities shape exposure, whether people seek help, and how they're treated when they do.",
-  why:"Women — especially pregnant people — face extra stigma and fear of losing custody; men are often socialized away from asking for help at all.",
+  why:"Marginalized populations face extra stigma and fear of losing custody; men are often socialized away from asking for help at all.",
   q:"How does gender act as a determinant here?",
   opts:["Through biology alone","Through norms, stigma, and help-seeking that differ by gender","It doesn't"], correct:1,
   fb:"Gender shapes exposure, stigma, and whether people feel safe seeking help.",
@@ -340,19 +340,19 @@ const STOPS = [
  {no:11, place:"Riverbank Cultural Centre", det:"Culture",
   see:"A round-dance poster; a sign lists services offered in five languages.",
   means:"Cultural background, traditions, and experiences of marginalization shape both health and how care is received.",
-  why:"Culturally safe, community-led care — including Indigenous-led approaches — builds trust and engagement; care that ignores culture pushes people away.",
+  why:"Culturally safe, community-led care including Indigenous-led approaches builds trust and engagement; care that ignores culture pushes people away.",
   q:"What makes care 'culturally safe'?",
   opts:["Translating a pamphlet once","Care shaped by and accountable to the community it serves","Ignoring culture to stay 'neutral'"], correct:1,
   fb:"Culturally safe care is led by and accountable to the community.",
   sky:["#16302a","#2f5a4b"], accent:"#ffd27f"},
 
  {no:12, place:"The 12th Street Stop", det:"Race & racism",
-  see:"A transit stop where the bus comes half as often as it does uptown — a neighbourhood shaped by decades of policy.",
-  means:"Racism — structural and interpersonal — is itself a determinant, shaping housing, policing, income, and the care people receive.",
+  see:"A transit stop where the bus comes half as often as it does uptown a neighbourhood shaped by decades of policy.",
+  means:"Racism, structural and interpersonal is itself a determinant, shaping housing, policing, income, and the care people receive.",
   why:"The same drug use is policed and framed very differently by race; who gets called 'sick' and who gets called 'criminal' is not random.",
   q:"Why is racism named as a determinant of health?",
   opts:["It's only about individual attitudes","It structures housing, policing, income, and care over generations","It has no health effect"], correct:1,
-  fb:"Racism operates structurally — through systems, not just attitudes.",
+  fb:"Racism operates structurally through systems, not just attitudes.",
   sky:["#0e1730","#243a5f"], accent:"#ff8c69"},
 ];
 
