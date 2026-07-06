@@ -22,6 +22,7 @@
     min-height:100vh; -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:1180px; margin:0 auto; padding:14px 14px 40px}
+
   /* ---------- header ---------- */
   header.bar{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding:6px 4px 14px}
   .brand{display:flex; align-items:baseline; gap:10px; flex:1 1 auto; min-width:0}
@@ -36,6 +37,7 @@
   .btn-reset{font-family:var(--fmono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
     background:transparent; border:1px solid var(--hair); border-radius:20px; padding:6px 12px; cursor:pointer}
   .btn-reset:hover{color:var(--paper); border-color:var(--muted)}
+
   /* ---------- scene viewport ---------- */
   .scene{position:relative; height:clamp(360px,54vh,540px); border-radius:16px; overflow:hidden;
     box-shadow:0 24px 60px -24px rgba(0,0,0,.7), inset 0 0 0 1px var(--hair); cursor:grab; touch-action:pan-y; user-select:none; background:#0c1424}
@@ -46,6 +48,7 @@
   .layer-far{z-index:1}
   .vignette{position:absolute; inset:0; z-index:3; pointer-events:none;
     background:radial-gradient(120% 90% at 50% 20%, transparent 55%, rgba(6,10,20,.55) 100%)}
+
   /* scene name plate */
   .plate{position:absolute; z-index:6; top:14px; left:14px; background:rgba(10,16,30,.72); backdrop-filter:blur(6px);
     border:1px solid var(--hair); border-radius:10px; padding:8px 12px; max-width:72%}
@@ -53,6 +56,7 @@
   .plate .pl{font-size:15px; font-weight:800; letter-spacing:.02em; margin-top:1px}
   .plate .det{font-family:var(--fmono); font-size:11px; letter-spacing:.06em; color:var(--muted); margin-top:2px}
   .plate .det.done{color:var(--teal)}
+
   /* hint */
   .hint{position:absolute; z-index:6; left:50%; bottom:16px; transform:translateX(-50%);
     font-family:var(--fmono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--paper);
@@ -60,6 +64,7 @@
     display:flex; align-items:center; gap:8px; transition:opacity .4s; pointer-events:none}
   .hint .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);animation:blink 1.4s infinite}
   @keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+
   /* walk chevrons */
   .walk{position:absolute; z-index:7; top:50%; transform:translateY(-50%); width:46px; height:46px; border-radius:50%;
     background:rgba(10,16,30,.66); border:1px solid var(--hair); color:var(--paper); cursor:pointer; font-size:20px;
@@ -68,11 +73,12 @@
   .walk.prev{left:12px} .walk.next{right:12px}
   .walk .lbl{position:absolute; bottom:-20px; font-family:var(--fmono); font-size:8.5px; letter-spacing:.14em;
     color:var(--muted); white-space:nowrap; text-transform:uppercase}
+
   /* determinant marker (hotspot) */
   .marker{position:absolute; z-index:5; transform:translate(-50%,-50%); cursor:pointer; background:none; border:0; padding:0}
   .pin{position:relative; width:46px; height:46px; border-radius:50%; display:grid; place-items:center;
     font-family:var(--fmono); font-weight:700; font-size:17px; color:#141c30;
-    background:radial-gradient(circle at 35% 30%, #ffd591, var(--amber)); box-shadow:0 8px 20px -6px rgba(0,0,0,.7);
+    background:radial-gradient(circle at 35% 30%, #ffd591, var(--amber)); box-shadow:0 8px 20px -6px rgba(0,0,0,.6);
     transition:transform .2s}
   .marker:hover .pin{transform:scale(1.08)}
   .marker:focus-visible{outline:none}
@@ -85,6 +91,7 @@
   .marker .stalk{position:absolute; left:50%; top:44px; transform:translateX(-50%); width:2px; height:26px;
     background:linear-gradient(var(--amber),transparent)}
   .marker.done .stalk{background:linear-gradient(var(--teal),transparent)}
+
   /* ---------- notebook rail ---------- */
   .rail-head{display:flex; align-items:center; gap:10px; margin:20px 2px 10px}
   .rail-head h2{font-size:12px; letter-spacing:.24em; text-transform:uppercase; margin:0; color:var(--muted); font-weight:700}
@@ -104,6 +111,7 @@
   .slot .chk{position:absolute; top:9px; right:10px; width:16px;height:16px;border-radius:50%; display:none; place-items:center;
     background:var(--teal); color:#08302a; font-size:10px; font-weight:800}
   .slot.done .chk{display:grid}
+
   /* ---------- modal ---------- */
   .scrim{position:fixed; inset:0; z-index:40; background:rgba(6,10,20,.66); backdrop-filter:blur(3px);
     display:none; align-items:center; justify-content:center; padding:16px}
@@ -121,6 +129,7 @@
   .card .close{position:absolute; top:12px; right:14px; z-index:2; width:30px;height:30px;border-radius:50%; border:1px solid var(--paper-line);
     background:var(--paper-2); color:var(--ink-soft); cursor:pointer; font-size:16px; line-height:1}
   .card .close:hover{color:var(--ink)}
+
   .check{margin-top:16px; border-top:1px dashed var(--paper-line); padding-top:14px}
   .check .q{font-size:14.5px; font-weight:700; margin:0 0 10px}
   .opt{display:block; width:100%; text-align:left; font-size:13.5px; line-height:1.35; padding:11px 12px; margin:7px 0;
@@ -136,6 +145,7 @@
     font-size:13px; text-transform:uppercase; opacity:.45; pointer-events:none; transition:opacity .2s}
   .collect.on{opacity:1; pointer-events:auto}
   .collect.done{background:none; color:var(--teal-deep); border:1px solid var(--teal-deep)}
+
   /* ---------- completion ---------- */
   .win{position:fixed; inset:0; z-index:50; display:none; align-items:center; justify-content:center; padding:18px;
     background:radial-gradient(900px 500px at 50% 30%, rgba(31,157,136,.28), rgba(6,10,20,.9))}
@@ -147,6 +157,7 @@
   .win .cta{margin-top:18px; display:inline-block; font-family:var(--fmono); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
     background:transparent; border:1px solid var(--muted); color:var(--paper); border-radius:22px; padding:10px 18px; cursor:pointer}
   .win .cta:hover{border-color:var(--teal); color:var(--teal)}
+
   /* ---- life & motion ---- */
   .bob{transform-box:fill-box;transform-origin:50% 100%;animation:bob var(--bd,2.6s) ease-in-out infinite;animation-delay:var(--bdl,0s)}
   .walker{transform-box:fill-box;transform-origin:50% 100%;animation:stroll var(--wd,7s) ease-in-out infinite alternate;animation-delay:var(--wdl,0s)}
@@ -166,6 +177,7 @@
   @keyframes flashbeacon{0%,49%{opacity:1}50%,100%{opacity:.12}}
   @keyframes swing{0%,100%{transform:rotate(15deg)}50%{transform:rotate(-15deg)}}
   @keyframes drive{from{transform:translateX(-300px)}to{transform:translateX(2320px)}}
+
   @media (prefers-reduced-motion: reduce){*{animation:none!important; transition:none!important}}
 </style>
 </head>
@@ -182,6 +194,7 @@
       <button class="btn-reset" id="reset">Reset</button>
     </div>
   </header>
+
   <div class="scene" id="scene" aria-label="City scene — drag to look around">
     <div class="layer layer-far" id="far"></div>
     <div class="layer layer-near" id="near"></div>
@@ -195,10 +208,12 @@
     <button class="walk next" id="next" aria-label="Next stop">›<span class="lbl">walk on</span></button>
     <div class="hint" id="hint"><span class="dot"></span>Drag to look around · tap the marker</div>
   </div>
+
   <div class="rail-head"><h2>Field Notebook</h2><div class="line"></div></div>
   <div class="rail" id="rail"></div>
 </div>
 
+<!-- modal -->
 <div class="scrim" id="scrim">
   <div class="card" role="dialog" aria-modal="true" aria-labelledby="mDet">
     <button class="close" id="mClose" aria-label="Close">✕</button>
@@ -219,332 +234,603 @@
   </div>
 </div>
 
+<!-- completion -->
 <div class="win" id="win">
   <div class="box">
     <div class="k">Tour complete · 12 / 12</div>
     <h2>You've mapped the city</h2>
     <p>These twelve rarely act alone — they stack. Income shapes housing shapes stress shapes coping. That's the framework: health is built (or eroded) by the conditions around a person, long before any "choice."</p>
-    <p style="color:var(--paper)"><b>Take it to your Casebook:</b> open your persona. Which two determinants weigh heaviest on them — and which single change would lift the most?</p>
+    <p style="color:var(--paper)"><b>Take it to your Casebook:</b> open your persona. Which two determinants weigh heaviest on them and which single change would help the most?</p>
     <button class="cta" id="winClose">Walk it again</button>
-    <button class="cta" id="downloadPdf" style="background:var(--teal); color:#04322b; border:none; margin-left:10px; font-weight:bold;">Download Notebook (PDF)</button>
   </div>
 </div>
 
 <script>
 const STOPS = [
-  {no:1, place:"First & Main", det:"Income & social status", see:"A glass bank tower throws its shadow over a tired walk-up across the street.", means:"Income and social position are the strongest determinant of health. They set your access to safe housing, good food, social activities and how much chronic stress you carry.", why:"Savings, stable housing, and a network cushion the risk. Poverty strips those buffers, so harm lands harder and recovery is steeper.", q:"Two people use the same drug the same way. Why does harm often fall harder on the lower-income person?", opts:["Their body processes it differently","They have fewer buffers: housing, money, support to absorb a setback","They simply use less willpower"], correct:1, fb:"Right income buys buffers (housing, care, time), not different biology.", sky:["#1b2a4e","#3a5480"], accent:"#ffb454"},
-  {no:2, place:"The Job Site", det:"Employment & working conditions", see:"A construction crane swings over a 24-hour diner where the night shift refuels.", means:"Whether you have work and whether it's secure, safe, and fair shapes health. Precarious, dangerous, or high-stress jobs raise risk; losing work removes structure and coverage.", why:"A back injury becomes a prescribed-opioid start; rotating night shifts feed stimulant and alcohol use; a layoff strips the routine and benefits that hold recovery together.", q:"Which of these is a working-conditions health risk?", opts:["A salaried role with benefits","Unpredictable shifts with no sick pay","A short commute"], correct:1, fb:"Precarious, unpredictable work with no safety net is the risk.", sky:["#3a2a4d","#7d4a63"], accent:"#ff9e6d"},
-  {no:3, place:"Riverside Library", det:"Education & literacy", see:"Kids spill out of a school beside a public library with a hand-lettered 'free wifi' sign.", means:"Education shapes job options, income, and health literacy — the ability to understand risks and navigate services.", why:"Lower health literacy makes it harder to read harm-reduction info, find treatment, or push back when a system brushes you off.", q:"How does education act on health here?", opts:["Only through exam scores","Through job options, income, and the skills to navigate care","It doesn't, really"], correct:1, fb:"Education works upstream — on income, options, and navigating the system.", sky:["#2b3646","#52627a"], accent:"#7fd7c8"},
-  {no:4, place:"Sunnyside Playground", det:"Childhood experiences", see:"An empty swing set beside a daycare with a two-year waitlist taped to the door.", means:"The early years set lifelong trajectories. Adverse childhood experiences (ACEs) — abuse, neglect, instability — leave a long shadow.", why:"Childhood trauma is one of the strongest predictors of later substance use. For many, using is a way to cope with pain that was never resolved.", q:"Why are ACEs relevant to substance use?", opts:["They switch on a specific gene","Unresolved early trauma is a powerful driver of later use","They aren't relevant"], correct:1, fb:"ACEs are among the strongest predictors — trauma drives coping.", sky:["#101a33","#26375a"], accent:"#ffd27f"},
-  {no:5, place:"Maple Court Apartments", det:"Physical environment & housing", see:"A boarded window, a dead buzzer, and a 'no vacancy' sign over a crowded block.", means:"Safe, stable, affordable housing — plus clean air and water and a walkable neighbourhood — is foundational to health.", why:"Without stable housing, using is riskier (often alone, in unsafe spots) and recovery is nearly impossible. 'Housing First' works because the housing comes first.", q:"Why does 'Housing First' put housing before treatment?", opts:["It's cheaper to build","Stability is the ground recovery stands on","It replaces treatment entirely"], correct:1, fb:"Stable housing is the foundation the rest of recovery needs.", sky:["#133b46","#2f6d78"], accent:"#ffce6a"},
-  {no:6, place:"Corner Community Café", det:"Social supports & coping", see:"A community board thick with flyers; inside, a peer-support group shares a long table.", means:"Family, friends, and community connection buffer stress and carry people through hard stretches.", why:"Isolation raises overdose risk — no one there to respond — while strong networks and peer support protect health and sustain recovery.", q:"How does isolation raise overdose risk specifically?", opts:["It changes the drug's potency","No one is present to notice or respond","It doesn't"], correct:1, fb:"Alone, there's no one to respond — connection is protective.", sky:["#33263f","#6a4a63"], accent:"#ffc07a"},
-  {no:7, place:"Eastside Rec & Grocer", det:"Healthy behaviours", see:"A rec centre with a padlocked gate sits next to a corner store stocked with chips, not produce.", means:"Day-to-day choices — food, activity, substance use — matter, but they're shaped by everything around them, not pure willpower.", why:"'Just choose better' ignores the setting: a food desert, nowhere safe to move, and chronic stress narrow the choices available in the first place.", q:"What's the catch with framing health as personal 'choices'?", opts:["Choices don't matter at all","The other determinants shape which choices are even available","Willpower is all that matters"], correct:1, fb:"Choices are real, but constrained by the surrounding determinants.", sky:["#17263f","#2f4a6b"], accent:"#8fe3d3"},
-  {no:8, place:"Downtown Clinic", det:"Access to health services", see:"A clinic with a three-month waitlist taped to the glass; the pharmacy closed at five.", means:"Health depends on getting timely, affordable, non-judgmental care when you actually need it.", why:"Waits, distance, cost, stigma, and criminalization all block treatment and harm reduction — the help exists, but people can't reach it.", q:"Which of these is an access barrier (not a treatment)?", opts:["Methadone","A three-month waitlist and no evening hours","A counsellor"], correct:1, fb:"Access barriers are the obstacle course between wanting help and getting it.", sky:["#2a1f3d","#553f66"], accent:"#ffd08a"},
-  {no:9, place:"General Hospital", det:"Biology & genetics", see:"An ambulance idles in the bay; upstairs, a family history is being taken on an intake form.", means:"Genes and biology influence how susceptible you are — but they set odds, not destiny.", why:"A family history raises addiction risk, yet whether it's ever expressed depends heavily on environment and the other determinants.", q:"How should we read 'genetic risk' for addiction?", opts:["It guarantees addiction","It shifts the odds; environment shapes the outcome","It's irrelevant"], correct:1, fb:"Genes load the dice; environment rolls them.", sky:["#1d2735","#3a4c63"], accent:"#cbe36a"},
-  {no:10, place:"Westgate Health Centre", det:"Gender", see:"A women's-health sign; a poster reads 'asking for help won't cost you your kids.'", means:"Gender norms and inequities shape exposure, whether people seek help, and how they're treated when they do.", why:"Women — especially pregnant people — face extra stigma and fear of losing custody; men are often socialized away from asking for help at all.", q:"How does gender act as a determinant here?", opts:["Through biology alone","Through norms, stigma, and help-seeking that differ by gender","It doesn't"], correct:1, fb:"Gender shapes exposure, stigma, and whether people feel safe seeking help.", sky:["#2c2836","#5a4d5f"], accent:"#ff9ec2"},
-  {no:11, place:"Riverbank Cultural Centre", det:"Culture", see:"A round-dance poster; a sign lists services offered in five languages.", means:"Cultural background, traditions, and experiences of marginalization shape both health and how care is received.", why:"Culturally safe, community-led care — including Indigenous-led approaches — builds trust and engagement; care that ignores culture pushes people away.", q:"What makes care 'culturally safe'?", opts:["Translating a pamphlet once","Care shaped by and accountable to the community it serves","Ignoring culture to stay 'neutral'"], correct:1, fb:"Culturally safe care is led by and accountable to the community.", sky:["#16302a","#2f5a4b"], accent:"#ffd27f"},
-  {no:12, place:"The 12th Street Stop", det:"Race & racism", see:"A transit stop where the bus comes half as often as it does uptown — a neighbourhood shaped by decades of policy.", means:"Racism — structural and interpersonal — is itself a determinant, shaping housing, policing, income, and the care people receive.", why:"The same drug use is policed and framed very differently by race; who gets called 'sick' and who gets called 'criminal' is not random.", q:"Why is racism named as a determinant of health?", opts:["It's only about individual attitudes","It structures housing, policing, income, and care over generations","It has no health effect"], correct:1, fb:"Racism operates structurally — through systems, not just attitudes.", sky:["#0e1730","#243a5f"], accent:"#ff8c69"}
+ {no:1, place:"First & Main", det:"Income & social status",
+  see:"A glass bank tower throws its shadow over a tired walk-up across the street.",
+  means:"Income and social position are the strongest determinant of health. They set your access to safe housing, good food, social activities and how much chronic stress you carry.",
+  why:"Savings, stable housing, and a network cushion the risk. Poverty strips those buffers, so harm lands harder and recovery is steeper.",
+  q:"Two people use the same drug the same way. Why does harm often fall harder on the lower-income person?",
+  opts:["Their body processes it differently","They have fewer buffers: housing, money, support to absorb a setback","They simply use less willpower"], correct:1,
+  fb:"Right income buys buffers (housing, care, time), not different biology.",
+  sky:["#1b2a4e","#3a5480"], accent:"#ffb454"},
+
+ {no:2, place:"The Job Site", det:"Employment & working conditions",
+  see:"A construction crane swings over a 24-hour diner where the night shift refuels.",
+  means:"Whether you have work and whether it's secure, safe, and fair shapes health. Precarious, dangerous, or high-stress jobs raise risk; losing work removes structure and coverage.",
+  why:"A back injury becomes a prescribed-opioid start; rotating night shifts feed stimulant and alcohol use; a layoff strips the routine and benefits that hold recovery together.",
+  q:"Which of these is a working-conditions health risk?",
+  opts:["A salaried role with benefits","Unpredictable shifts with no sick pay","A short commute"], correct:1,
+  fb:"Precarious, unpredictable work with no safety net is the risk.",
+  sky:["#3a2a4d","#7d4a63"], accent:"#ff9e6d"},
+
+ {no:3, place:"Riverside Library", det:"Education & literacy",
+  see:"Kids spill out of a school beside a public library with a hand-lettered 'free afterschool tutoring' sign.",
+  means:"Education shapes job options, income, and health literacy. This gives people the ability to understand risks and navigate services.",
+  why:"Lower health literacy makes it harder to read harm-reduction info, find treatment, or push back when a system brushes you off.",
+  q:"How does education act on health here?",
+  opts:["Only through exam scores","Through job options, income, and the skills to navigate care","It doesn't, really"], correct:1,
+  fb:"Education works upstream, on income, options, and navigating the system.",
+  sky:["#2b3646","#52627a"], accent:"#7fd7c8"},
+
+ {no:4, place:"Sunnyside Playground", det:"Childhood experiences",
+  see:"An empty swing set beside a daycare with a two-year waitlist taped to the door.",
+  means:"The early years set lifelong trajectories. Adverse childhood experiences (ACEs) abuse, neglect, instability can leave a long shadow.",
+  why:"Childhood trauma is one of the strongest predictors of later substance use. For many, using is a way to cope with pain that was never resolved.",
+  q:"Why are ACEs relevant to substance use?",
+  opts:["They switch on a specific gene","Unresolved early trauma is a powerful driver of later use","They aren't relevant"], correct:1,
+  fb:"ACEs are among the strongest predictors, trauma drives coping.",
+  sky:["#101a33","#26375a"], accent:"#ffd27f"},
+
+ {no:5, place:"Maple Court Apartments", det:"Physical environment & housing",
+  see:"A boarded window, a dead buzzer, and a 'no vacancy' sign over a crowded block.",
+  means:"Safe, stable, affordable housing, plus clean air and water and a walkable neighbourhood is foundational to health.",
+  why:"Without stable housing, using is riskier (often alone, in unsafe spots) and recovery is nearly impossible. 'Housing First' works because the housing comes first.",
+  q:"Why does 'Housing First' put housing before treatment?",
+  opts:["It's cheaper to build","Stability is the ground recovery stands on","It replaces treatment entirely"], correct:1,
+  fb:"Stable housing is the foundation the rest of recovery needs.",
+  sky:["#133b46","#2f6d78"], accent:"#ffce6a"},
+
+ {no:6, place:"Corner Community Café", det:"Social supports & coping",
+  see:"A community board thick with flyers; inside, a peer-support group shares a long table.",
+  means:"Family, friends, and community connection buffer stress and carry people through hard stretches.",
+  why:"Isolation raises overdose risk with no one there to respond. While strong networks and peer support protect health and sustain recovery.",
+  q:"How does isolation raise overdose risk specifically?",
+  opts:["It changes the drug's potency","No one is present to notice or respond","It doesn't"], correct:1,
+  fb:"Alone, there's no one to respond — connection is protective.",
+  sky:["#33263f","#6a4a63"], accent:"#ffc07a"},
+
+ {no:7, place:"Eastside Rec & Grocer", det:"Healthy behaviours",
+  see:"A rec centre with a padlocked gate sits next to a corner store stocked with chips, not produce.",
+  means:"Day-to-day choices, food, activity, substance use it matters, but they're shaped by everything around them, not pure willpower.",
+  why:"'Just choose better' ignores the setting: a food desert, nowhere safe to move, and chronic stress narrow the choices available in the first place.",
+  q:"What's the catch with framing health as personal 'choices'?",
+  opts:["Choices don't matter at all","The other determinants shape which choices are even available","Willpower is all that matters"], correct:1,
+  fb:"Choices are real, but constrained by the surrounding determinants.",
+  sky:["#17263f","#2f4a6b"], accent:"#8fe3d3"},
+
+ {no:8, place:"Downtown Clinic", det:"Access to health services",
+  see:"A clinic with a three-month waitlist taped to the glass; the pharmacy closed at five.",
+  means:"Health depends on getting timely, affordable, non-judgmental care when you actually need it.",
+  why:"Waits, distance, cost, stigma, and criminalization all block treatment and harm reduction. The help may exist, but people can't reach it.",
+  q:"Which of these is an access barrier (not a treatment)?",
+  opts:["Methadone","A three-month waitlist and no evening hours","A counsellor"], correct:1,
+  fb:"Access barriers are the obstacle course between wanting help and getting it.",
+  sky:["#2a1f3d","#553f66"], accent:"#ffd08a"},
+
+ {no:9, place:"General Hospital", det:"Biology & genetics",
+  see:"An ambulance idles in the bay; upstairs, a family history is being taken on an intake form.",
+  means:"Genes and biology influence how susceptible you are, but they set odds, not destiny.",
+  why:"A family history raises addiction risk, yet whether it's ever expressed depends heavily on environment and the other determinants.",
+  q:"How should we read 'genetic risk' for addiction?",
+  opts:["It guarantees addiction","It shifts the odds; environment shapes the outcome","It's irrelevant"], correct:1,
+  fb:"Genes load the dice; environment rolls them.",
+  sky:["#1d2735","#3a4c63"], accent:"#cbe36a"},
+
+ {no:10, place:"Westgate Health Centre", det:"Gender",
+  see:"A women's-health sign; a poster reads 'asking for help won't cost you and your kids.'",
+  means:"Gender norms and inequities shape exposure, whether people seek help, and how they're treated when they do.",
+  why:"Marginalized populations face extra stigma and fear of losing custody; men are often socialized away from asking for help at all.",
+  q:"How does gender act as a determinant here?",
+  opts:["Through biology alone","Through norms, stigma, and help-seeking that differ by gender","It doesn't"], correct:1,
+  fb:"Gender shapes exposure, stigma, and whether people feel safe seeking help.",
+  sky:["#2c2836","#5a4d5f"], accent:"#ff9ec2"},
+
+ {no:11, place:"Riverbank Cultural Centre", det:"Culture",
+  see:"A round-dance poster; a sign lists services offered in five languages.",
+  means:"Cultural background, traditions, and experiences of marginalization shape both health and how care is received.",
+  why:"Culturally safe, community-led care including Indigenous-led approaches builds trust and engagement; care that ignores culture pushes people away.",
+  q:"What makes care 'culturally safe'?",
+  opts:["Translating a pamphlet once","Care shaped by and accountable to the community it serves","Ignoring culture to stay 'neutral'"], correct:1,
+  fb:"Culturally safe care is led by and accountable to the community.",
+  sky:["#16302a","#2f5a4b"], accent:"#ffd27f"},
+
+ {no:12, place:"The 12th Street Stop", det:"Race & racism",
+  see:"A transit stop where the bus comes half as often as it does uptown a neighbourhood shaped by decades of policy.",
+  means:"Racism, structural and interpersonal is itself a determinant, shaping housing, policing, income, and the care people receive.",
+  why:"The same drug use is policed and framed very differently by race; who gets called 'sick' and who gets called 'criminal' is not random.",
+  q:"Why is racism named as a determinant of health?",
+  opts:["It's only about individual attitudes","It structures housing, policing, income, and care over generations","It has no health effect"], correct:1,
+  fb:"Racism operates structurally through systems, not just attitudes.",
+  sky:["#0e1730","#243a5f"], accent:"#ff8c69"},
 ];
 
 const STAGE_W = 2000, STAGE_H = 520;
 const state = { i:0, collected:new Set(), pan:0, answered:false };
 
-function el(id){ return document.getElementById(id); }
-const sceneEl = el('scene');
+/* seeded rng */
+function rng(seed){ let s = seed*2654435761 >>> 0; return ()=>{ s ^= s<<13; s^=s>>>17; s^=s<<5; s>>>=0; return s/4294967296; }; }
 
-/* ---------- rendering engine ---------- */
-function renderScene() {
-  const currentStop = STOPS[state.i];
-  
-  el('pNo').textContent = `STOP ${String(currentStop.no).padStart(2,'0')} / 12`;
-  el('pPlace').textContent = currentStop.place;
-  el('pDet').textContent = currentStop.det;
-  
-  const isCollected = state.collected.has(currentStop.no);
-  el('pDet').className = 'det' + (isCollected ? ' done' : '');
-  
-  if (currentStop.sky && currentStop.sky.length >= 2) {
-    sceneEl.style.background = `linear-gradient(180deg, ${currentStop.sky[0]} 0%, ${currentStop.sky[1]} 100%)`;
-  }
-  
-  const farLayer = el('far');
-  const nearLayer = el('near');
-  
-  let farHtml = `<svg viewBox="0 0 ${STAGE_W} ${STAGE_H}">`;
-  let nearHtml = `<svg viewBox="0 0 ${STAGE_W} ${STAGE_H}">`;
-  
-  farHtml += `<path d="M 0 420 L 150 280 L 320 420 L 500 210 L 680 420 L 900 180 L 1150 420 L 1400 260 L 1650 420 L 1850 190 L 2000 420 Z" fill="rgba(255,255,255,0.04)"/>`;
-  farHtml += `<path d="M 0 450 L 250 340 L 520 450 L 850 290 L 1200 450 L 1550 310 L 2000 450 Z" fill="rgba(255,255,255,0.06)"/>`;
-  
-  nearHtml += `<rect x="0" y="440" width="${STAGE_W}" height="80" fill="rgba(255,255,255,0.08)" />`;
-  nearHtml += `<line x1="0" y1="440" x2="${STAGE_W}" y2="440" stroke="rgba(255,255,255,0.15)" stroke-width="2" />`;
-  
-  farHtml += `</svg>`;
-  nearHtml += `</svg>`;
-  
-  farLayer.innerHTML = farHtml;
-  nearLayer.innerHTML = nearHtml;
-  
-  removeMarker();
-  buildMarker(currentStop);
-  updatePan();
+// ================= SCENE ART SYSTEM =================
+function esc(t){return (t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+const SKY = {
+ day:     {tod:'day',    top:'#8fc0ec', mid:'#aed4f2', bot:'#dcecf7', cel:'sun',    celc:'#fff6cf', silo:'#a7c0d6', lit:0.03, lamp:false, cloud:4, star:0,  road:'#41485a', walk:'#5a6274', grass:'#57a052', plank:'#9c7b4e', water:'#5fa8c9', leaf:'#4f9a52', trunk:'#5a4632'},
+ dawn:    {tod:'dawn',   top:'#2b355a', mid:'#8a5f83', bot:'#ffb583', cel:'sun',    celc:'#ffd9a6', silo:'#3a3a55', lit:0.22, lamp:true,  cloud:2, star:10, road:'#2b3346', walk:'#3a4356', grass:'#3f6f4a', plank:'#6f563a', water:'#5a7a9a', leaf:'#3d6a48', trunk:'#4a3a2c'},
+ golden:  {tod:'golden', top:'#4a5c92', mid:'#e58a55', bot:'#ffd58c', cel:'bigsun', celc:'#fff0c4', silo:'#8a5a4a', lit:0.10, lamp:false, cloud:3, star:0,  road:'#4a4152', walk:'#5f5560', grass:'#6a7a3e', plank:'#8a6a44', water:'#e0a05a', leaf:'#6a7a3e', trunk:'#5a4632'},
+ overcast:{tod:'overcast',top:'#93a0b0',mid:'#a7b3c0', bot:'#c6d0d9', cel:'none',   celc:'#eef2f6', silo:'#8f9daf', lit:0.05, lamp:true,  cloud:6, star:0,  road:'#44505e', walk:'#5a6672', grass:'#5a7a5a', plank:'#8a7658', water:'#7a97a8', leaf:'#5a7a58', trunk:'#5a4a3a'},
+ dusk:    {tod:'dusk',   top:'#1c2a4e', mid:'#5a4a7a', bot:'#c98a72', cel:'sun',    celc:'#ffcf9e', silo:'#28324f', lit:0.34, lamp:true,  cloud:2, star:34, road:'#232b40', walk:'#323b52', grass:'#33553f', plank:'#5f4a34', water:'#3a5570', leaf:'#2f5540', trunk:'#3a2e24'},
+ evening: {tod:'evening',top:'#141d33', mid:'#33304e', bot:'#6a4a55', cel:'none',   celc:'#ffcf9e', silo:'#1e2740', lit:0.5,  lamp:true,  cloud:0, star:44, road:'#1b2338', walk:'#2a3248', grass:'#2a4636', plank:'#4a3a2a', water:'#2a4258', leaf:'#28463a', trunk:'#32281e'},
+ night:   {tod:'night',  top:'#0a1226', mid:'#101c38', bot:'#1c2a48', cel:'moon',   celc:'#fdf1cf', silo:'#141d34', lit:0.6,  lamp:true,  cloud:0, star:90, road:'#141c2e', walk:'#20293c', grass:'#1f3a2e', plank:'#3a2e20', water:'#1a3550', leaf:'#1f3a2e', trunk:'#241c14'},
+};
+
+const ART = {
+ 1: {tod:'day',     env:'downtown',   sig:'glasstower',    ground:'street',   props:['walkup','streetlight','trees:1600,300','crosswalk']},
+ 2: {tod:'dawn',    env:'lot',        sig:'construction',  ground:'lot',      props:['crane','diner','barrier','streetlight']},
+ 3: {tod:'day',     env:'campus',     sig:'library',       ground:'sidewalk', props:['school','trees:360,520,1560,1720','flag']},
+ 4: {tod:'day',     env:'park',       sig:'parksign',      ground:'grass',    props:['swings','slide','trees:320,560,1520,1700','bench','daycare']},
+ 5: {tod:'overcast',env:'residential',sig:'apartment',     ground:'street',   props:['walkup2','dumpster','streetlight']},
+ 6: {tod:'evening', env:'street',     sig:'cafe',          ground:'sidewalk', props:['cafetables','board','streetlight','trees:1650']},
+ 7: {tod:'day',     env:'street',     sig:'reccentre',     ground:'street',   props:['gate','cornerstore','hoop','trees:360']},
+ 8: {tod:'dusk',    env:'street',     sig:'clinic',        ground:'street',   props:['pharmacy','bench','streetlight']},
+ 9: {tod:'night',   env:'downtown',   sig:'hospital',      ground:'driveway', props:['ambulance','streetlight']},
+ 10:{tod:'day',     env:'street',     sig:'healthcentre',  ground:'sidewalk', props:['poster','trees:340,560,1620','bench']},
+ 11:{tod:'golden',  env:'waterfront', sig:'culturalcentre',ground:'boardwalk',props:['bridge','lanterns','trees:1650,1780']},
+ 12:{tod:'night',   env:'transit',    sig:'busshelter',    ground:'street',   props:['bus','bench2','streetlight']},
+};
+
+/* ---------- sky + backdrop ---------- */
+function skyDefs(gid, sk){
+  let g=`<defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="${sk.top}"/>`;
+  if(sk.mid) g+=`<stop offset="0.5" stop-color="${sk.mid}"/>`;
+  g+=`<stop offset="1" stop-color="${sk.bot}"/></linearGradient>
+    <radialGradient id="${gid}c"><stop offset="0" stop-color="${sk.celc}" stop-opacity=".95"/><stop offset="1" stop-color="${sk.celc}" stop-opacity="0"/></radialGradient></defs>`;
+  return g;
 }
-
-function updatePan() {
-  const limit = STAGE_W - sceneEl.clientWidth;
-  if(state.pan > 0) state.pan = 0;
-  if(state.pan < -limit) state.pan = -limit;
-  
-  el('far').style.transform = `translateX(${state.pan * 0.4}px)`;
-  el('near').style.transform = `translateX(${state.pan}px)`;
+function celestial(sk, x, gid){
+  if(sk.cel==='none') return '';
+  if(sk.cel==='moon') return `<circle cx="${x}" cy="120" r="120" fill="url(#${gid}c)"/><circle cx="${x}" cy="120" r="34" fill="#fdf1cf" opacity=".9"/><circle cx="${x-14}" cy="112" r="7" fill="#e6d6ad" opacity=".5"/><circle cx="${x+10}" cy="128" r="5" fill="#e6d6ad" opacity=".5"/>`;
+  const y = sk.cel==='bigsun'?300:130, rr = sk.cel==='bigsun'?70:40, gr = sk.cel==='bigsun'?260:150;
+  return `<circle cx="${x}" cy="${y}" r="${gr}" fill="${sk.celc}" opacity=".5"/><circle cx="${x}" cy="${y}" r="${rr}" fill="${sk.celc}"/>`;
 }
-
-function buildMarker(stop) {
-  const btn = document.createElement('button');
-  btn.className = 'marker' + (state.collected.has(stop.no) ? ' done' : '');
-  btn.id = 'activeMarker';
-  
-  btn.style.left = `1000px`;
-  btn.style.top = `320px`;
-  
-  btn.innerHTML = `<div class="pin">${String(stop.no).padStart(2,'0')}</div><div class="stalk"></div>`;
-  
-  btn.addEventListener('click', openModal);
-  el('near').appendChild(btn);
-}
-
-function removeMarker() {
-  const m = el('activeMarker');
-  if(m) m.remove();
-}
-
-/* ---------- dragging system ---------- */
-let isDragging = false, startX = 0, startPan = 0, hasMoved = false;
-
-sceneEl.addEventListener('mousedown', e => {
-  if(e.target.closest('.walk') || e.target.closest('.marker')) return;
-  isDragging = true;
-  hasMoved = false;
-  sceneEl.classList.add('dragging');
-  startX = e.clientX;
-  startPan = state.pan;
-});
-
-window.addEventListener('mousemove', e => {
-  if(!isDragging) return;
-  const dx = e.clientX - startX;
-  if(Math.abs(dx) > 4) hasMoved = true;
-  state.pan = startPan + dx;
-  updatePan();
-});
-
-window.addEventListener('mouseup', () => {
-  if(!isDragging) return;
-  isDragging = false;
-  sceneEl.classList.remove('dragging');
-  if(hasMoved) el('hint').style.opacity = '0';
-});
-
-sceneEl.addEventListener('touchstart', e => {
-  if(e.target.closest('.walk') || e.target.closest('.marker')) return;
-  isDragging = true;
-  startX = e.touches[0].clientX;
-  startPan = state.pan;
-}, {passive:true});
-
-sceneEl.addEventListener('touchmove', e => {
-  if(!isDragging) return;
-  const dx = e.touches[0].clientX - startX;
-  state.pan = startPan + dx;
-  updatePan();
-}, {passive:true});
-
-sceneEl.addEventListener('touchend', () => { isDragging = false; });
-
-/* ---------- directional navigation ---------- */
-el('prev').addEventListener('click', () => {
-  state.i = (state.i - 1 + STOPS.length) % STOPS.length;
-  state.pan = 0;
-  renderScene();
-  refresh();
-});
-
-el('next').addEventListener('click', () => {
-  state.i = (state.i + 1) % STOPS.length;
-  state.pan = 0;
-  renderScene();
-  refresh();
-});
-
-/* ---------- modal interactivity ---------- */
-function openModal() {
-  const stop = STOPS[state.i];
-  state.answered = state.collected.has(stop.no);
-  
-  el('mKick').textContent = `STOP ${String(stop.no).padStart(2,'0')}`;
-  el('mDet').textContent = stop.det;
-  el('mPlace').textContent = stop.place;
-  el('mSee').textContent = stop.see;
-  el('mMeans').textContent = stop.means;
-  el('mWhy').textContent = stop.why;
-  el('mQ').textContent = stop.q;
-  
-  const optsDiv = el('mOpts');
-  optsDiv.innerHTML = '';
-  
-  stop.opts.forEach((o, idx) => {
-    const b = document.createElement('button');
-    b.className = 'opt';
-    b.textContent = o;
-    
-    if(state.answered) {
-      b.disabled = true;
-      if(idx === stop.correct) b.classList.add('right');
-    }
-    
-    b.addEventListener('click', () => handleAnswer(idx, b));
-    optsDiv.appendChild(b);
-  });
-  
-  const fb = el('mFb');
-  fb.textContent = stop.fb;
-  fb.classList.toggle('show', state.answered);
-  
-  const coll = el('mCollect');
-  coll.className = 'collect' + (state.answered ? ' on done' : '');
-  coll.textContent = state.collected.has(stop.no) ? 'Saved in Notebook' : 'Add to field notebook';
-  
-  el('scrim').classList.add('open');
-}
-
-function handleAnswer(idx, btnEl) {
-  if(state.answered) return;
-  const stop = STOPS[state.i];
-  state.answered = true;
-  
-  const options = el('mOpts').children;
-  for(let b of options) b.disabled = true;
-  
-  if(idx === stop.correct) {
-    btnEl.classList.add('right');
-    el('mCollect').classList.add('on');
+function stars(r,n){ let s='<g class="twinkle" fill="#ffffff">'; for(let i=0;i<n;i++){s+=`<circle cx="${(r()*2000)|0}" cy="${(r()*250)|0}" r="${r()<.16?1.5:0.8}" opacity="${(0.2+r()*0.6).toFixed(2)}"/>`;} return s+'</g>'; }
+function clouds(r,n,col){ let s='<g class="drift" fill="'+col+'" opacity=".65">'; for(let i=0;i<n;i++){const cx=(r()*2000)|0,cy=40+(r()*150)|0,w=60+r()*80; s+=`<g><ellipse cx="${cx}" cy="${cy}" rx="${w}" ry="${w*0.32}"/><ellipse cx="${cx-w*0.5}" cy="${cy+6}" rx="${w*0.55}" ry="${w*0.28}"/><ellipse cx="${cx+w*0.5}" cy="${cy+6}" rx="${w*0.55}" ry="${w*0.28}"/></g>`;} return s+'</g>'; }
+function birds(r){ let s=''; const col='#22324c'; for(let i=0;i<7;i++){const y=36+((i*20)%150)+((r()*18)|0),dur=(20+r()*15).toFixed(1),del=(-(r()*30)).toFixed(1),sc=(0.7+r()*0.7).toFixed(2); s+=`<g transform="translate(0 ${y})"><g class="bird" style="--fd:${dur}s;--fdl:${del}s"><g transform="scale(${sc})"><g class="flap"><path d="M0 0 q7 -6 14 0 q7 -6 14 0" fill="none" stroke="${col}" stroke-width="2.4" stroke-linecap="round"/></g></g></g></g>`;} return s; }
+function backdrop(env, r, sk, GY){
+  // distant silhouette varies by environment
+  let s=`<g fill="${sk.silo}" opacity="${sk.tod==='day'?0.5:0.7}">`;
+  if(env==='park'||env==='campus'||env==='waterfront'){
+    // rolling tree line
+    let x=0; while(x<2000){ const w=60+r()*70, h=50+r()*70; s+=`<ellipse cx="${x+w/2}" cy="${GY-40}" rx="${w/2}" ry="${h}"/>`; x+=w*0.7; }
   } else {
-    btnEl.classList.add('wrong');
-    options[stop.correct].classList.add('right');
-    el('mCollect').classList.add('on');
+    // skyline
+    let x=0; while(x<2000){ const w=45+r()*100, h=90+r()*180; s+=`<rect x="${x}" y="${GY-60-h}" width="${w}" height="${h+60}"/>`; x+=w+r()*8; }
   }
-  
-  el('mFb').classList.add('show');
+  s+='</g>';
+  return s;
 }
 
-el('mCollect').addEventListener('click', () => {
-  const stop = STOPS[state.i];
-  state.collected.add(stop.no);
-  
-  el('mCollect').className = 'collect on done';
-  el('mCollect').textContent = 'Saved in Notebook';
-  
-  renderScene();
-  refresh();
-  
-  setTimeout(() => {
-    closeModal();
-    if(state.collected.size === STOPS.length) el('win').classList.add('open');
-  }, 550);
-});
+/* ---------- ground ---------- */
+function ground(type, GY, sk){
+  const H=520;
+  let s='';
+  if(type==='grass'){
+    s+=`<rect x="0" y="${GY}" width="2000" height="${H-GY}" fill="${sk.grass}"/>`;
+    s+=`<path d="M0 ${GY+40} Q 500 ${GY+20} 1000 ${GY+50} T 2000 ${GY+40} V ${H} H 0 Z" fill="${sk.walk}" opacity=".8"/>`;
+  } else if(type==='boardwalk'){
+    s+=`<rect x="0" y="${GY-6}" width="2000" height="46" fill="${sk.water}"/>`; // water strip
+    for(let i=0;i<60;i++){ s+=`<rect x="${(Math.random()*2000)|0}" y="${GY+2+(i%3)*10}" width="${30}" height="2" fill="#ffffff" opacity=".10"/>`; }
+    s+=`<rect x="0" y="${GY+40}" width="2000" height="${H-GY-40}" fill="${sk.plank}"/>`;
+    for(let x=0;x<2000;x+=44){ s+=`<rect x="${x}" y="${GY+40}" width="2" height="${H-GY-40}" fill="#000" opacity=".14"/>`; }
+  } else if(type==='lot'){
+    s+=`<rect x="0" y="${GY}" width="2000" height="${H-GY}" fill="#7a6a4e"/>`;
+    for(let i=0;i<30;i++){ s+=`<ellipse cx="${(Math.random()*2000)|0}" cy="${GY+10+Math.random()*(H-GY-10)}" rx="${8+Math.random()*20}" ry="3" fill="#000" opacity=".08"/>`; }
+  } else {
+    // street / sidewalk / driveway
+    s+=`<rect x="0" y="${GY}" width="2000" height="${H-GY}" fill="${sk.road}"/>`;
+    if(type==='sidewalk'){ s+=`<rect x="0" y="${GY}" width="2000" height="22" fill="${sk.walk}"/><rect x="0" y="${GY+22}" width="2000" height="3" fill="#000" opacity=".18"/>`; }
+    if(type==='driveway'){ s+=`<rect x="0" y="${GY}" width="2000" height="6" fill="#c94a3a" opacity=".6"/>`; }
+    // lane dashes
+    for(let x=40;x<2000;x+=120){ s+=`<rect x="${x}" y="${GY+ (H-GY)*0.62}" width="46" height="5" rx="2" fill="#e8dca0" opacity=".5"/>`; }
+  }
+  return s;
+}
 
+/* ---------- primitives ---------- */
+function windows(x,y,w,h,r,sk,litCol,boost){
+  const cols=Math.max(2,(w/30)|0), rows=Math.max(2,(h/36)|0); let s='';
+  const dark = (sk.tod==='day'||sk.tod==='overcast'||sk.tod==='golden')?'#b9c9d9':'#1b2942';
+  for(let ci=0;ci<cols;ci++)for(let ri=0;ri<rows;ri++){
+    const lit=r()<(sk.lit+(boost||0));
+    const wx=x+9+ci*((w-18)/cols), wy=y+10+ri*((h-20)/rows), ww=Math.max(6,(w-18)/cols-7);
+    s+=`<rect x="${wx.toFixed(0)}" y="${wy.toFixed(0)}" width="${ww.toFixed(0)}" height="13" rx="1.5" fill="${lit?(litCol||'#ffd98a'):dark}" opacity="${lit?0.92:(sk.tod==='day'?0.55:0.85)}"/>`;
+  }
+  return s;
+}
+function bldg(x,GY,w,h,fill,r,sk,opt){opt=opt||{}; const y=GY-h;
+  return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="2" fill="${fill}"/>`+windows(x,y,w,h,r,sk,opt.win,opt.boost);
+}
+function sign(cx,y,w,text,acc){const x=cx-w/2; const t=esc(text.toUpperCase()); const tt=t.length>24?t.slice(0,23)+'…':t;
+  return `<rect x="${x}" y="${y}" width="${w}" height="28" rx="5" fill="#0c1424" stroke="${acc}" stroke-opacity=".85"/><text x="${cx}" y="${y+19}" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" letter-spacing="1.3" fill="${acc}">${tt}</text>`;
+}
+function tree(x,GY,s,sk){return `<g><rect x="${x-3*s}" y="${GY-38*s}" width="${6*s}" height="${40*s}" fill="${sk.trunk}"/><circle cx="${x}" cy="${GY-50*s}" r="${22*s}" fill="${sk.leaf}"/><circle cx="${x-15*s}" cy="${GY-38*s}" r="${15*s}" fill="${sk.leaf}"/><circle cx="${x+15*s}" cy="${GY-38*s}" r="${15*s}" fill="${sk.leaf}"/></g>`;}
+function lamp(x,GY,on,acc){let s=`<rect x="${x}" y="${GY-150}" width="4" height="150" fill="#12203a"/><circle cx="${x+2}" cy="${GY-152}" r="7" fill="${on?acc:'#37485f'}"/>`; if(on)s+=`<circle cx="${x+2}" cy="${GY-152}" r="26" fill="${acc}" opacity=".16"/><polygon points="${x+2},${GY-150} ${x-26},${GY} ${x+30},${GY}" fill="${acc}" opacity=".06"/>`; return s;}
+function bench(x,GY){return `<g fill="#5b6b82"><rect x="${x}" y="${GY-18}" width="70" height="6"/><rect x="${x}" y="${GY-34}" width="70" height="6"/><rect x="${x+4}" y="${GY-18}" width="6" height="18"/><rect x="${x+60}" y="${GY-18}" width="6" height="18"/></g>`;}
+
+/* ---------- signature structures ---------- */
+function drawSig(kind, cx, sk, acc, name, r, GY){
+  let svg='', topY=GY-240;
+  const b=(x,w,h,f,o)=>bldg(x,GY,w,h,f,r,sk,o);
+  switch(kind){
+    case 'glasstower':{ const w=150,h=320; svg+=b(cx-w/2,w,h,'#28405f',{win:'#bfe6ff',boost:0.06});
+      for(let fy=GY-h+14; fy<GY-30; fy+=26) svg+=`<rect x="${cx-w/2}" y="${fy}" width="${w}" height="2" fill="#0c1a2c" opacity=".4"/>`;
+      svg+=`<rect x="${cx-w/2}" y="${GY-h}" width="${w}" height="10" fill="${acc}" opacity=".8"/>`;
+      svg+=sign(cx,GY-42,180,name,acc); topY=GY-h; break; }
+    case 'apartment':{ const w=190,h=250; svg+=b(cx-w/2,w,h,'#3a4c66',{win:'#ffcf8a'});
+      svg+=`<rect x="${cx-40}" y="${GY-h+40}" width="34" height="26" fill="#6a5a3a"/>`; // boarded window
+      svg+=`<line x1="${cx-40}" y1="${GY-h+40}" x2="${cx-6}" y2="${GY-h+66}" stroke="#8a7a4a" stroke-width="3"/><line x1="${cx-6}" y1="${GY-h+40}" x2="${cx-40}" y2="${GY-h+66}" stroke="#8a7a4a" stroke-width="3"/>`;
+      for(let fy=GY-h+20; fy<GY-20; fy+=44){ svg+=`<line x1="${cx+30}" y1="${fy}" x2="${cx+86}" y2="${fy}" stroke="#22303f" stroke-width="3"/>`; } // fire escape rails
+      svg+=`<line x1="${cx+30}" y1="${GY-h+20}" x2="${cx+30}" y2="${GY-20}" stroke="#22303f" stroke-width="3"/><line x1="${cx+86}" y1="${GY-h+20}" x2="${cx+86}" y2="${GY-20}" stroke="#22303f" stroke-width="3"/>`;
+      svg+=sign(cx,GY-40,180,name,acc); topY=GY-h; break; }
+    case 'library':{ const w=210,h=170; const y=GY-h; svg+=`<rect x="${cx-w/2}" y="${y}" width="${w}" height="${h}" fill="#4a5470"/>`;
+      for(let i=0;i<6;i++){const px=cx-w/2+22+i*((w-44)/5); svg+=`<rect x="${px}" y="${y+18}" width="12" height="${h-30}" fill="#5a668a"/>`;}
+      svg+=`<polygon points="${cx-w/2-6},${y+18} ${cx},${y-32} ${cx+w/2+6},${y+18}" fill="#54608a"/>`; // pediment
+      svg+=`<rect x="${cx-w/2-10}" y="${GY-14}" width="${w+20}" height="14" fill="#3c4358"/>`; // steps
+      svg+=sign(cx,y-30,150,name,acc); topY=y-32; break; }
+    case 'construction':{ const w=170,h=300,y=GY-h; svg+=`<rect x="${cx-w/2}" y="${y}" width="${w}" height="${h}" fill="#2c3550" opacity=".65"/>`;
+      for(let gy2=y; gy2<GY; gy2+=40) svg+=`<line x1="${cx-w/2}" y1="${gy2}" x2="${cx+w/2}" y2="${gy2}" stroke="#5a6580" stroke-width="3"/>`;
+      for(let gx=cx-w/2; gx<=cx+w/2; gx+=40) svg+=`<line x1="${gx}" y1="${y}" x2="${gx}" y2="${GY}" stroke="#5a6580" stroke-width="3"/>`;
+      // partially clad lower floors
+      svg+=b(cx-w/2,w,110,'#3a4560',{win:'#ffcf8a'});
+      svg+=`<rect x="${cx-w/2-10}" y="${GY-46}" width="${w+20}" height="30" rx="4" fill="#0c1424" stroke="${acc}"/><text x="${cx}" y="${GY-26}" text-anchor="middle" font-family="ui-monospace" font-size="11" letter-spacing="1.2" fill="${acc}">${esc(name.toUpperCase()).slice(0,22)}</text>`;
+      topY=y; break; }
+    case 'hospital':{ const w=180,h=280,y=GY-h; svg+=b(cx-w/2,w,h,'#2f4160',{win:'#eaf3ff',boost:0.15});
+      svg+=`<rect x="${cx-70}" y="${GY-42}" width="140" height="42" fill="#26374f"/>`; // canopy base
+      svg+=`<rect x="${cx-70}" y="${GY-46}" width="140" height="8" fill="${acc}"/>`;
+      // lit cross on roof
+      svg+=`<g><rect x="${cx-8}" y="${y-48}" width="16" height="46" rx="3" fill="#ff5a4a"/><rect x="${cx-23}" y="${y-33}" width="46" height="16" rx="3" fill="#ff5a4a"/><rect x="${cx-8}" y="${y-48}" width="16" height="46" rx="3" fill="#ff5a4a" opacity=".4"/></g>`;
+      svg+=`<circle cx="${cx}" cy="${y-26}" r="52" fill="#ff5a4a" opacity=".12"/>`;
+      svg+=sign(cx,y+6,150,name,acc); topY=y-48; break; }
+    case 'clinic':{ const w=170,h=180,y=GY-h; svg+=b(cx-w/2,w,h,'#33465f',{win:'#eaf3ff'});
+      svg+=`<g><rect x="${cx-40}" y="${y-30}" width="14" height="34" rx="2" fill="#7fd7c8"/><rect x="${cx-52}" y="${y-18}" width="38" height="14" rx="2" fill="#7fd7c8"/></g>`; // teal cross
+      svg+=`<rect x="${cx-24}" y="${GY-52}" width="48" height="52" fill="#8fb2c8" opacity=".3"/>`; // glass door
+      svg+=`<rect x="${cx+6}" y="${y+16}" width="52" height="30" fill="#f4ecd8" opacity=".9"/><text x="${cx+32}" y="${y+36}" text-anchor="middle" font-family="ui-monospace" font-size="8" fill="#7a3a3a">WAITLIST 12wk</text>`; // taped note
+      svg+=sign(cx,y-28,150,name,acc); topY=y-30; break; }
+    case 'healthcentre':{ const w=180,h=170,y=GY-h; svg+=b(cx-w/2,w,h,'#3c5a70',{win:'#ffe6b0',boost:0.05});
+      svg+=`<path d="M${cx-30} ${GY} V ${GY-40} A 30 30 0 0 1 ${cx+30} ${GY-40} V ${GY} Z" fill="#274050"/>`; // arched door
+      svg+=`<rect x="${cx-w/2}" y="${y}" width="${w}" height="8" fill="${acc}"/>`;
+      svg+=sign(cx,y-28,170,name,acc); topY=y-28; break; }
+    case 'reccentre':{ const w=240,h=140,y=GY-h; svg+=`<rect x="${cx-w/2}" y="${y}" width="${w}" height="${h}" rx="3" fill="#3a4c60"/>`;
+      svg+=windows(cx-w/2,y,w,h,r,sk,'#ffd98a');
+      svg+=`<rect x="${cx-46}" y="${GY-58}" width="92" height="58" fill="#26343f"/>`; // big doors
+      svg+=`<rect x="${cx-w/2}" y="${y-14}" width="${w}" height="16" fill="${acc}" opacity=".85"/>`;
+      svg+=sign(cx,y+8,190,name,acc); topY=y-14; break; }
+    case 'cafe':{ const w=200,h=120,y=GY-h; svg+=`<rect x="${cx-w/2}" y="${y}" width="${w}" height="${h}" rx="3" fill="#3a2f3f"/>`;
+      svg+=`<rect x="${cx-70}" y="${GY-70}" width="140" height="66" rx="3" fill="#ffcf7a" opacity=".85"/>`; // warm window glow
+      svg+=windows(cx-w/2,y,w,60,r,sk,'#ffdf9a',0.4);
+      // striped awning
+      let aw=''; for(let i=0;i<10;i++){aw+=`<rect x="${cx-100+i*20}" y="${y-2}" width="20" height="26" fill="${i%2?'#c94a4a':'#f4ecd8'}"/>`;}
+      svg+=`<g>${aw}</g><polygon points="${cx-100},${y+24} ${cx+100},${y+24} ${cx+92},${y+40} ${cx-92},${y+40}" fill="#b03e3e" opacity=".2"/>`;
+      // hanging sign
+      svg+=`<rect x="${cx-55}" y="${y-56}" width="110" height="30" rx="4" fill="#0c1424" stroke="${acc}"/><text x="${cx}" y="${y-36}" text-anchor="middle" font-family="ui-monospace" font-size="11" fill="${acc}">${esc(name.toUpperCase()).slice(0,18)}</text>`;
+      topY=y-56; break; }
+    case 'culturalcentre':{ const w=200,h=150,y=GY-h; svg+=`<rect x="${cx-w/2}" y="${y}" width="${w}" height="${h}" fill="#3a4d5a"/>`;
+      svg+=windows(cx-w/2,y,w,h,r,sk,'#ffe0a0',0.1);
+      svg+=`<polygon points="${cx-w/2-14},${y} ${cx},${y-56} ${cx+w/2+14},${y}" fill="#4a6070"/>`; // peaked roof
+      svg+=`<polygon points="${cx},${y-56} ${cx-8},${y-40} ${cx+8},${y-40}" fill="${acc}"/>`;
+      // banners/flags
+      for(let i=0;i<3;i++){const fx=cx-60+i*60; svg+=`<rect x="${fx}" y="${GY-90}" width="4" height="90" fill="#33465f"/><polygon points="${fx+4},${GY-90} ${fx+34},${GY-82} ${fx+4},${GY-74}" fill="${['#e2705a','#7fd7c8','#ffd27f'][i]}"/>`;}
+      svg+=sign(cx,y-30,180,name,acc); topY=y-56; break; }
+    case 'parksign':{ // wooden arch entrance
+      const y=GY-150; svg+=`<rect x="${cx-110}" y="${y}" width="12" height="150" fill="#6f563a"/><rect x="${cx+98}" y="${y}" width="12" height="150" fill="#6f563a"/>`;
+      svg+=`<rect x="${cx-116}" y="${y-24}" width="232" height="30" rx="4" fill="#7a5f3e"/>`;
+      svg+=`<text x="${cx}" y="${y-3}" text-anchor="middle" font-family="ui-monospace" font-size="13" letter-spacing="1.5" fill="#ffe9c2">${esc(name.toUpperCase()).slice(0,22)}</text>`;
+      svg+=`<rect x="${cx-4}" y="${y-24}" width="8" height="8" fill="${acc}"/>`;
+      topY=y-24; break; }
+    case 'busshelter':{ const y=GY; svg+=`<rect x="${cx-70}" y="${y-92}" width="150" height="6" fill="#33465f"/>`;
+      svg+=`<rect x="${cx-66}" y="${y-86}" width="142" height="82" fill="#8fb2c8" opacity=".16" stroke="#5b6b82"/>`;
+      svg+=`<rect x="${cx-70}" y="${y-86}" width="6" height="82" fill="#33465f"/><rect x="${cx+74}" y="${y-92}" width="6" height="88" fill="#33465f"/>`;
+      svg+=`<rect x="${cx-58}" y="${y-30}" width="100" height="8" fill="#5b6b82"/>`; // bench
+      svg+=`<rect x="${cx-40}" y="${y-86}" width="60" height="40" fill="#ffcf7a" opacity=".18"/>`; // lit ad panel
+      svg+=`<rect x="${cx-30}" y="${y-128}" width="80" height="30" rx="4" fill="#0c1424" stroke="${acc}"/><text x="${cx+10}" y="${y-108}" text-anchor="middle" font-family="ui-monospace" font-size="11" letter-spacing="1" fill="${acc}">12TH ST</text>`;
+      topY=y-128; break; }
+    default:{ svg+=b(cx-90,180,240,'#3a4c66'); svg+=sign(cx,GY-40,180,name,acc); topY=GY-240; }
+  }
+  return {svg, mx:cx, topY};
+}
+
+/* ---------- props ---------- */
+function drawProp(key, ctx){
+  const {r, GY, sk, acc}=ctx; const b=(x,w,h,f,o)=>bldg(x,GY,w,h,f,r,sk,o);
+  let name=key, args=[]; if(key.indexOf(':')>-1){ name=key.split(':')[0]; args=key.split(':')[1].split(',').map(Number); }
+  switch(name){
+    case 'trees': return args.map(x=>tree(x,GY,0.9+ (r()*0.4), sk)).join('');
+    case 'streetlight': return lamp(150,GY,sk.lamp,acc)+lamp(1850,GY,sk.lamp,acc);
+    case 'crosswalk':{ let s=''; for(let i=0;i<6;i++)s+=`<rect x="${940+i*20}" y="${GY+ (520-GY)*0.5}" width="12" height="60" fill="#e8dca0" opacity=".4"/>`; return s;}
+    case 'walkup': return b(560,150,150,'#4a4048',{win:'#ffcf8a'})+`<rect x="600" y="${GY-70}" width="30" height="20" fill="#6a5a3a"/>`;
+    case 'walkup2': return b(560,160,160,'#454f5e',{win:'#a9b6c4'})+b(1330,150,140,'#3f4856',{win:'#a9b6c4'});
+    case 'diner':{ const x=1360; return `<rect x="${x}" y="${GY-90}" width="150" height="90" rx="6" fill="#3a3f4e"/>`+windows(x,GY-90,150,60,r,sk,'#ffe08a',0.5)+`<rect x="${x+30}" y="${GY-118}" width="90" height="24" rx="12" fill="#0c1424" stroke="#ff8fa0"/><text x="${x+75}" y="${GY-101}" text-anchor="middle" font-family="ui-monospace" font-size="11" fill="#ff8fa0">OPEN 24H</text>`;}
+    case 'crane': return (function(){const x=1420,top=GY-380; return `<g stroke="#e8b84e" stroke-width="5" fill="none" opacity=".92"><line x1="${x}" y1="${GY}" x2="${x}" y2="${top}"/><line x1="${x-140}" y1="${top}" x2="${x+230}" y2="${top}"/><line x1="${x}" y1="${top-42}" x2="${x-140}" y2="${top}"/><line x1="${x}" y1="${top-42}" x2="${x+230}" y2="${top}"/><line x1="${x-9}" y1="${GY}" x2="${x+9}" y2="${GY-60}"/><line x1="${x+9}" y1="${GY}" x2="${x-9}" y2="${GY-60}"/></g><line x1="${x+150}" y1="${top}" x2="${x+150}" y2="${top+70}" stroke="#e8b84e" stroke-width="3"/><rect x="${x+140}" y="${top+70}" width="20" height="14" fill="#e8b84e"/>`;})();
+    case 'barrier':{ let s=''; for(let i=0;i<7;i++){const x=520+i*40; s+=`<rect x="${x}" y="${GY-30}" width="30" height="30" fill="${i%2?'#e2534a':'#f4ecd8'}"/>`;} return s;}
+    case 'school': return b(1360,220,150,'#4a5470',{win:'#ffd98a'})+`<rect x="1360" y="${GY-166}" width="220" height="16" fill="${acc}" opacity=".7"/>`;
+    case 'flag': return `<rect x="330" y="${GY-160}" width="4" height="160" fill="#8a95a5"/><polygon points="334,${GY-160} 384,${GY-150} 334,${GY-140}" fill="${acc}"/>`;
+    case 'swings': return (function(){const x=1300; return `<g stroke="#5b6b82" stroke-width="5" fill="none"><line x1="${x-46}" y1="${GY}" x2="${x-34}" y2="${GY-76}"/><line x1="${x+46}" y1="${GY}" x2="${x+34}" y2="${GY-76}"/><line x1="${x-34}" y1="${GY-76}" x2="${x+34}" y2="${GY-76}"/><line x1="${x-14}" y1="${GY-76}" x2="${x-14}" y2="${GY-26}"/><line x1="${x+14}" y1="${GY-76}" x2="${x+14}" y2="${GY-26}"/></g><rect x="${x-22}" y="${GY-28}" width="16" height="5" rx="2" fill="#c98a4a"/><rect x="${x+6}" y="${GY-28}" width="16" height="5" rx="2" fill="#c98a4a"/>`;})();
+    case 'slide': return (function(){const x=1520; return `<polyline points="${x-30},${GY-78} ${x-30},${GY} ${x+46},${GY}" fill="none" stroke="#6b7b92" stroke-width="5"/><polygon points="${x-30},${GY-78} ${x-18},${GY-78} ${x+46},${GY-6} ${x+46},${GY-16}" fill="#7fb2d9"/><rect x="${x-42}" y="${GY-100}" width="24" height="26" rx="3" fill="#e2705a"/>`;})();
+    case 'daycare': return b(300,200,120,'#4a5f6a',{win:'#ffe0a0'})+`<rect x="330" y="${GY-150}" width="140" height="20" fill="#f4ecd8"/><text x="400" y="${GY-135}" text-anchor="middle" font-family="ui-monospace" font-size="9" fill="#7a5a3a">WAITLIST 2yr</text>`;
+    case 'bench': return bench(args[0]||1650,GY);
+    case 'bench2': return bench(1500,GY);
+    case 'dumpster': return `<g><rect x="1360" y="${GY-40}" width="80" height="40" rx="3" fill="#3a5a4a"/><rect x="1360" y="${GY-46}" width="80" height="8" fill="#2e4a3c"/></g>`;
+    case 'cafetables':{ let s=''; [1250,1360].forEach(x=>{ s+=`<circle cx="${x}" cy="${GY-30}" r="18" fill="#5a4a4a"/><rect x="${x-2}" y="${GY-30}" width="4" height="30" fill="#4a3a3a"/><rect x="${x-24}" y="${GY-20}" width="8" height="20" fill="#4a3a3a"/><rect x="${x+16}" y="${GY-20}" width="8" height="20" fill="#4a3a3a"/>`; }); 
+      s+=`<g class="twinkle" stroke="${acc}" stroke-width="2">`; for(let i=0;i<8;i++)s+=`<circle cx="${1200+i*30}" cy="${GY-150+ (i%2)*8}" r="3" fill="${acc}"/>`; s+='</g>'; return s;}
+    case 'board': return `<g><rect x="640" y="${GY-70}" width="70" height="54" fill="#5a4632"/><rect x="646" y="${GY-64}" width="58" height="42" fill="#7a6a52"/>`+[0,1,2,3].map(i=>`<rect x="${650+ (i%2)*28}" y="${GY-60+((i/2)|0)*20}" width="22" height="16" fill="${['#f4ecd8','#ffd27f','#e2705a','#7fd7c8'][i]}" opacity=".9"/>`).join('')+`<rect x="668" y="${GY-16}" width="4" height="16" fill="#5a4632"/></g>`;
+    case 'gate': return `<g stroke="#8a95a5" stroke-width="2" opacity=".8"><rect x="${1000-120}" y="${GY-84}" width="240" height="84" fill="none"/>`+Array.from({length:10}).map((_,i)=>`<line x1="${880+i*24}" y1="${GY-84}" x2="${904+i*24}" y2="${GY}"/><line x1="${904+i*24}" y1="${GY-84}" x2="${880+i*24}" y2="${GY}"/>`).join('')+`</g><circle cx="1000" cy="${GY-44}" r="8" fill="#e2c14e"/>`;
+    case 'cornerstore': return b(1360,170,110,'#4a463a',{win:'#ffe08a'})+`<rect x="1360" y="${GY-136}" width="170" height="18" fill="#c94a4a"/><text x="1445" y="${GY-122}" text-anchor="middle" font-family="ui-monospace" font-size="10" fill="#fff">CORNER STORE</text>`;
+    case 'hoop': return `<g><rect x="480" y="${GY-160}" width="5" height="160" fill="#5b6b82"/><rect x="455" y="${GY-172}" width="40" height="28" fill="#8fb2c8" opacity=".4" stroke="#8a95a5"/><ellipse cx="470" cy="${GY-146}" rx="16" ry="5" fill="none" stroke="#e2705a" stroke-width="3"/></g>`;
+    case 'pharmacy': return b(1330,160,150,'#33465f',{win:'#a9c6d9'})+`<rect x="1350" y="${GY-186}" width="120" height="24" rx="4" fill="#0c1424" stroke="#7fd7c8"/><text x="1410" y="${GY-169}" text-anchor="middle" font-family="ui-monospace" font-size="10" fill="#7fd7c8">RX · CLOSED</text>`;
+    case 'ambulance': return (function(){const x=1330; return `<g><rect x="${x}" y="${GY-46}" width="120" height="42" rx="6" fill="#eef2f6"/><rect x="${x+82}" y="${GY-38}" width="30" height="22" fill="#bcd0e0"/><rect x="${x}" y="${GY-46}" width="120" height="7" fill="#e2534a"/><rect x="${x+30}" y="${GY-30}" width="10" height="26" fill="#e2534a"/><rect x="${x+22}" y="${GY-22}" width="26" height="10" fill="#e2534a"/><circle cx="${x+20}" cy="${GY-2}" r="8" fill="#12203a"/><circle cx="${x+104}" cy="${GY-2}" r="8" fill="#12203a"/><g class="flash"><rect x="${x+52}" y="${GY-56}" width="16" height="9" rx="2" fill="#ff5a4a"/><circle cx="${x+60}" cy="${GY-60}" r="16" fill="#ff5a4a" opacity=".28"/></g></g>`;})();
+    case 'poster': return `<g><rect x="640" y="${GY-84}" width="60" height="80" fill="#f4ecd8"/><rect x="646" y="${GY-78}" width="48" height="30" fill="${acc}" opacity=".5"/><text x="670" y="${GY-30}" text-anchor="middle" font-family="ui-monospace" font-size="8" fill="#3a4358">YOU'RE</text><text x="670" y="${GY-20}" text-anchor="middle" font-family="ui-monospace" font-size="8" fill="#3a4358">WELCOME</text><rect x="668" y="${GY-4}" width="4" height="4" fill="#5a4632"/></g>`;
+    case 'bridge': return `<g stroke="#5a4a4a" stroke-width="6" fill="none" opacity=".7"><path d="M60 ${GY-6} Q 300 ${GY-90} 540 ${GY-6}"/><line x1="150" y1="${GY-44}" x2="150" y2="${GY-6}"/><line x1="300" y1="${GY-70}" x2="300" y2="${GY-6}"/><line x1="450" y1="${GY-44}" x2="450" y2="${GY-6}"/></g>`;
+    case 'lanterns':{ let s=''; for(let i=0;i<5;i++){const x=1200+i*160; s+=`<rect x="${x}" y="${GY-130}" width="3" height="130" fill="#4a3a2a"/><circle cx="${x+1}" cy="${GY-128}" r="8" fill="#ffb454"/><circle cx="${x+1}" cy="${GY-128}" r="18" fill="#ffb454" opacity=".2"/>`;} return s;}
+    case 'bus': return (function(){const x=430; return `<g><rect x="${x}" y="${GY-62}" width="160" height="58" rx="9" fill="#2b3a5c"/><rect x="${x+12}" y="${GY-52}" width="140" height="24" fill="#8fb2c8" opacity=".3"/><rect x="${x+12}" y="${GY-52}" width="34" height="24" fill="#0c1424"/><circle cx="${x+150}" cy="${GY-22}" r="6" fill="#ffe08a"/><circle cx="${x+150}" cy="${GY-22}" r="20" fill="#ffe08a" opacity=".22"/><circle cx="${x+34}" cy="${GY-2}" r="9" fill="#12203a"/><circle cx="${x+126}" cy="${GY-2}" r="9" fill="#12203a"/></g>`;})();
+    default: return '';
+  }
+}
+
+/* ---------- people ---------- */
+const SKIN=['#f6d0a9','#e8b88c','#cf9b6a','#a9713f','#7a4a24','#5a3418'];
+const SHIRT=['#e05a4a','#3f7fd0','#3fae7a','#e0a83f','#8a5fd0','#d94f8a','#4aa0a8','#5a6b82','#dfe3ea','#2c3e60'];
+const PANTS=['#2c3550','#37323e','#5a4632','#40506a','#33475a','#5a4a4a'];
+const HAIR=['#241a12','#4a3524','#6a5038','#8a6a44','#141414','#6a6a6a','#c98a4a','#dfe3ea'];
+function pk(a,seed){return a[Math.abs(seed)%a.length];}
+function darken(hex){const n=parseInt(hex.slice(1),16);let r=(((n>>16)&255)*0.78)|0,g=(((n>>8)&255)*0.78)|0,b=((n&255)*0.78)|0;return '#'+((r<<16)|(g<<8)|b).toString(16).padStart(6,'0');}
+function drawPerson(x, gy, o){
+  const type=o.type||'adult', seed=o.seed||1;
+  const skin=pk(SKIN,seed), shirt=pk(SHIRT,seed*3+1), pants=pk(PANTS,seed*5+2), hair=pk(HAIR,seed*7+3), sd=darken(shirt);
+  const isKid=type==='kid'; const S=(o.s||1)*(isKid?0.62:1);
+  const headR=6*S*(isKid?1.15:1), hipY=gy-16*S, shoY=gy-34*S, headCy=gy-42*S;
+  let g=`<ellipse cx="${x}" cy="${gy+1}" rx="${9*S}" ry="${2.4*S}" fill="#000" opacity=".18"/>`;
+  if(type==='sit'){
+    const seatY=gy-14*S, shoY2=seatY-18*S, headCy2=seatY-26*S;
+    g+=`<rect x="${x-1*S}" y="${seatY-3*S}" width="${11*S}" height="${3.6*S}" rx="${1.6*S}" fill="${pants}"/>`;
+    g+=`<rect x="${x+8*S}" y="${seatY}" width="${3.4*S}" height="${14*S}" rx="${1.4*S}" fill="${pants}"/>`;
+    g+=`<rect x="${x-5.5*S}" y="${shoY2}" width="${11*S}" height="${20*S}" rx="${3.4*S}" fill="${shirt}"/>`;
+    g+=`<rect x="${x-7.4*S}" y="${shoY2+1*S}" width="${2.6*S}" height="${12*S}" rx="${1.3*S}" fill="${sd}"/>`;
+    g+=`<circle cx="${x}" cy="${headCy2}" r="${headR}" fill="${skin}"/><path d="M ${x-headR} ${headCy2} A ${headR} ${headR} 0 0 1 ${x+headR} ${headCy2}" fill="${hair}"/>`;
+    return g;
+  }
+  if(type==='jog'){
+    g+=`<polygon points="${x-1*S},${hipY} ${x-6*S},${gy} ${x-2.5*S},${gy} ${x+1.5*S},${hipY}" fill="${pants}"/>`;
+    g+=`<polygon points="${x+1*S},${hipY} ${x+7*S},${gy-4*S} ${x+9*S},${gy-1.5*S} ${x+3.5*S},${hipY}" fill="${pants}"/>`;
+    g+=`<rect x="${x-5*S}" y="${shoY}" width="${11*S}" height="${17*S}" rx="${3*S}" fill="${shirt}" transform="rotate(6 ${x} ${shoY+8*S})"/>`;
+    g+=`<rect x="${x+4*S}" y="${shoY+2*S}" width="${2.6*S}" height="${9*S}" rx="${1.3*S}" fill="${sd}" transform="rotate(40 ${x+5*S} ${shoY+4*S})"/>`;
+    g+=`<circle cx="${x+1.5*S}" cy="${headCy}" r="${headR}" fill="${skin}"/><path d="M ${x+1.5*S-headR} ${headCy} A ${headR} ${headR} 0 0 1 ${x+1.5*S+headR} ${headCy}" fill="${hair}"/>`;
+    return g;
+  }
+  // standing: adult / kid / worker / wait
+  g+=`<rect x="${x-4*S}" y="${hipY}" width="${3.3*S}" height="${16*S}" rx="${1.5*S}" fill="${pants}"/>`;
+  g+=`<rect x="${x+0.7*S}" y="${hipY}" width="${3.3*S}" height="${16*S}" rx="${1.5*S}" fill="${pants}"/>`;
+  g+=`<rect x="${x-5.5*S}" y="${shoY}" width="${11*S}" height="${18*S}" rx="${3*S}" fill="${shirt}"/>`;
+  if(type==='worker') g+=`<rect x="${x-5.5*S}" y="${shoY+7*S}" width="${11*S}" height="${3*S}" fill="#f2e6a0" opacity=".85"/>`;
+  g+=`<rect x="${x-7.4*S}" y="${shoY+1*S}" width="${2.6*S}" height="${13*S}" rx="${1.3*S}" fill="${sd}"/>`;
+  g+=`<rect x="${x+4.8*S}" y="${shoY+1*S}" width="${2.6*S}" height="${13*S}" rx="${1.3*S}" fill="${sd}"/>`;
+  g+=`<rect x="${x-1.5*S}" y="${shoY-3*S}" width="${3*S}" height="${4*S}" fill="${skin}"/>`;
+  g+=`<circle cx="${x}" cy="${headCy}" r="${headR}" fill="${skin}"/>`;
+  if(type==='worker'){ g+=`<path d="M ${x-headR-1} ${headCy} A ${headR+1} ${headR+1} 0 0 1 ${x+headR+1} ${headCy}" fill="#f2c14e"/><rect x="${x-headR-2}" y="${headCy-1}" width="${2*headR+4}" height="2.4" rx="1" fill="#d9a62e"/>`; }
+  else { g+=`<path d="M ${x-headR} ${headCy} A ${headR} ${headR} 0 0 1 ${x+headR} ${headCy}" fill="${hair}"/>`; }
+  return g;
+}
+function swingChild(x,gy,seed){const topY=gy-74,seatY=gy-30,skin=pk(SKIN,seed),shirt=pk(SHIRT,seed*3);
+  return `<g class="swing"><line x1="${x}" y1="${topY}" x2="${x-3}" y2="${seatY}" stroke="#3a4658" stroke-width="2"/><line x1="${x+8}" y1="${topY}" x2="${x+5}" y2="${seatY}" stroke="#3a4658" stroke-width="2"/><rect x="${x-6}" y="${seatY}" width="14" height="3" fill="#c98a4a"/><rect x="${x-4}" y="${seatY-12}" width="9" height="12" rx="3" fill="${shirt}"/><circle cx="${x+0.5}" cy="${seatY-16}" r="4.5" fill="${skin}"/></g>`;}
+function car(y,col){return `<g transform="translate(0 ${y})"><rect x="0" y="6" width="120" height="30" rx="8" fill="${col}"/><path d="M22 8 Q42 -14 80 8 Z" fill="${col}"/><rect x="30" y="-2" width="42" height="14" rx="4" fill="#bcd0e0" opacity=".55"/><circle cx="26" cy="38" r="9" fill="#12203a"/><circle cx="94" cy="38" r="9" fill="#12203a"/><circle cx="121" cy="22" r="4" fill="#ffe08a"/><circle cx="121" cy="22" r="11" fill="#ffe08a" opacity=".25"/></g>`;}
+const CARS={1:'#e05a4a',3:'#3f7fd0',7:'#3fae7a',8:'#e0a83f',10:'#8a5fd0'};
+
+const PEOPLE = {
+ 1:[[280,1,'adult'],[440,0.85,'adult'],[640,0.7,'kid'],[1450,1,'adult'],[1620,0.9,'adult'],[1760,0.7,'kid']],
+ 2:[[1290,1,'worker'],[1180,0.9,'worker'],[1120,0.8,'adult'],[300,0.9,'adult'],[520,0.75,'adult'],[620,0.7,'kid']],
+ 3:[[280,0.95,'adult'],[440,0.65,'kid'],[600,0.7,'kid'],[1450,1,'adult'],[1600,0.7,'kid'],[1740,0.9,'adult']],
+ 4:[[1520,0.62,'kid'],[1150,1,'adult'],[420,0.68,'kid'],[300,0.95,'adult'],[600,0.6,'kid'],[1700,0.85,'adult']],
+ 5:[[280,1,'adult'],[460,0.7,'kid'],[1350,0.9,'adult'],[1500,0.8,'adult'],[640,0.75,'adult']],
+ 6:[[1250,0.9,'sit'],[1360,0.9,'sit'],[1180,0.85,'sit'],[600,0.9,'adult'],[300,0.85,'adult'],[760,0.7,'kid']],
+ 7:[[300,1,'jog'],[1480,0.95,'adult'],[520,0.65,'kid'],[1660,0.85,'adult'],[640,0.9,'adult'],[1760,0.7,'kid']],
+ 8:[[1663,0.85,'sit'],[300,0.95,'adult'],[520,0.8,'adult'],[640,0.75,'adult'],[1480,0.9,'adult']],
+ 9:[[1300,0.95,'adult'],[300,0.9,'adult'],[560,0.85,'adult'],[680,0.8,'adult']],
+ 10:[[280,0.95,'adult'],[460,0.6,'kid'],[620,0.7,'kid'],[1480,1,'adult'],[1660,0.85,'adult'],[1780,0.7,'kid']],
+ 11:[[280,1,'adult'],[460,0.7,'kid'],[640,0.9,'adult'],[1420,0.95,'adult'],[1600,0.9,'adult'],[1760,0.85,'adult'],[820,0.7,'kid']],
+ 12:[[960,0.9,'wait'],[430,0.85,'adult'],[1680,0.85,'adult'],[1520,0.8,'adult']],
+};
+
+function buildScene(stop, idx){
+  const a = ART[stop.no] || {tod:'dusk',env:'street',sig:'apartment',ground:'street',props:[]};
+  const sk = SKY[a.tod]; const acc = stop.accent;
+  const r = rng((stop.no+7)*131);
+  const gid='g'+stop.no;
+  const GY = a.ground==='grass'?396:(a.ground==='boardwalk'?372:410);
+
+  // ---- FAR ----
+  let far = `<svg viewBox="0 0 ${STAGE_W} ${STAGE_H}" width="${STAGE_W}" preserveAspectRatio="xMidYMid slice">`;
+  far += skyDefs(gid, sk);
+  far += `<rect width="${STAGE_W}" height="${STAGE_H}" fill="url(#${gid})"/>`;
+  far += celestial(sk, 300+idx*64, gid);
+  if(sk.star) far += stars(r, sk.star);
+  if(sk.cloud) far += clouds(r, sk.cloud, sk.tod==='golden'?'#ffd9a0':(sk.tod==='day'?'#ffffff':'#2a3550'));
+  if(['day','dawn','golden','overcast','dusk'].includes(sk.tod)) far += birds(r);
+  far += backdrop(a.env, r, sk, GY);
+  far += `</svg>`;
+
+  // ---- NEAR ----
+  let near = `<svg viewBox="0 0 ${STAGE_W} ${STAGE_H}" width="${STAGE_W}" preserveAspectRatio="xMidYMid slice">`;
+  near += ground(a.ground, GY, sk);
+  near += `<rect x="0" y="${GY-2}" width="${STAGE_W}" height="3" fill="${acc}" opacity=".28"/>`;
+  const sig = drawSig(a.sig, 1000, sk, acc, stop.place, r, GY);
+  near += sig.svg;
+  (a.props||[]).forEach(p=> near += drawProp(p, {r, GY, sk, acc}));
+  if(CARS[stop.no]){ const cy=GY+(STAGE_H-GY)*0.42; near += `<g class="car" style="--cd:${13+stop.no%5}s;--cdl:${-(stop.no*2)}s">${car(cy,CARS[stop.no])}</g>`; }
+  if(stop.no===4) near += swingChild(1300, GY, 5);
+  (PEOPLE[stop.no]||[]).forEach((p,i)=>{
+    const t=p[2]||'adult';
+    const fig=drawPerson(p[0], GY, {s:p[1], type:t, seed:(stop.no*7+i*13+3)});
+    const bob=`<g class="bob" style="--bd:${(2.2+((i*0.3)%1.4)).toFixed(2)}s;--bdl:${(-(i*0.6)).toFixed(1)}s">${fig}</g>`;
+    const walks=(t==='adult'||t==='jog')&&(i%2===0);
+    near += walks ? `<g class="walker" style="--wd:${(5+i%4)}s;--wdl:${(-(i*0.8)).toFixed(1)}s">${bob}</g>` : bob;
+  });
+  near += `</svg>`;
+
+  return { far, near, markerX: sig.mx, markerY: sig.topY-8 };
+}
+
+/* ---------- DOM ---------- */
+const el = id => document.getElementById(id);
+const sceneEl=el('scene'), farEl=el('far'), nearEl=el('near');
+let markerBtn=null, sceneGeo=null;
+
+function renderScene(){
+  const stop=STOPS[state.i];
+  sceneGeo=buildScene(stop, state.i);
+  farEl.innerHTML=sceneGeo.far;
+  nearEl.innerHTML=sceneGeo.near;
+  // marker
+  markerBtn=document.createElement('button');
+  markerBtn.className='marker'+(state.collected.has(stop.no)?' done':'');
+  markerBtn.setAttribute('aria-label', stop.det+' — open');
+  markerBtn.style.left=sceneGeo.markerX+'px';
+  markerBtn.style.top=sceneGeo.markerY+'px';
+  markerBtn.innerHTML=`<span class="stalk"></span><span class="pin">${state.collected.has(stop.no)?'✓':String(stop.no).padStart(2,'0')}</span>`;
+  markerBtn.addEventListener('click', e=>{ e.stopPropagation(); openModal(); });
+  nearEl.appendChild(markerBtn);
+  // plate
+  el('pNo').textContent=`STOP ${String(stop.no).padStart(2,'0')} / 12`;
+  el('pPlace').textContent=stop.place;
+  const done=state.collected.has(stop.no);
+  el('pDet').textContent=done?'✓ '+stop.det+' — collected':stop.det;
+  el('pDet').className='det'+(done?' done':'');
+  // centre pan on marker
+  centreOnMarker();
+  updateWalkLabels();
+}
+
+function centreOnMarker(){
+  const vw=sceneEl.clientWidth;
+  const scale=sceneEl.clientHeight/STAGE_H;
+  const stageScaledW=STAGE_W*scale;
+  let target = vw/2 - sceneGeo.markerX*scale;
+  state.pan=clampPan(target, stageScaledW, vw);
+  applyPan();
+}
+function clampPan(p, stageW, vw){ const min=Math.min(0, vw-stageW); return Math.max(min, Math.min(0,p)); }
+function applyPan(){
+  const scale=sceneEl.clientHeight/STAGE_H;
+  farEl.style.transform=`translateX(${state.pan*0.4}px) scale(${scale})`;
+  nearEl.style.transform=`translateX(${state.pan}px) scale(${scale})`;
+}
+
+/* drag to look */
+let dragging=false, startX=0, startPan=0, moved=false;
+function down(x){ dragging=true; moved=false; startX=x; startPan=state.pan; sceneEl.classList.add('dragging'); hideHint(); }
+function move(x){ if(!dragging)return; const dx=x-startX; if(Math.abs(dx)>4)moved=true;
+  const vw=sceneEl.clientWidth, scale=sceneEl.clientHeight/STAGE_H, stageW=STAGE_W*scale;
+  state.pan=clampPan(startPan+dx, stageW, vw); applyPan(); }
+function up(){ dragging=false; sceneEl.classList.remove('dragging'); }
+sceneEl.addEventListener('mousedown',e=>down(e.clientX));
+window.addEventListener('mousemove',e=>move(e.clientX));
+window.addEventListener('mouseup',up);
+sceneEl.addEventListener('touchstart',e=>down(e.touches[0].clientX),{passive:true});
+sceneEl.addEventListener('touchmove',e=>move(e.touches[0].clientX),{passive:true});
+sceneEl.addEventListener('touchend',up);
+
+let hintGone=false;
+function hideHint(){ if(hintGone)return; hintGone=true; el('hint').style.opacity='0'; }
+
+/* nav */
+function go(delta){ state.i=(state.i+delta+STOPS.length)%STOPS.length; state.pan=0; renderScene(); }
+el('next').addEventListener('click',e=>{e.stopPropagation(); go(1);});
+el('prev').addEventListener('click',e=>{e.stopPropagation(); go(-1);});
+function updateWalkLabels(){
+  el('next').querySelector('.lbl').textContent = 'to '+STOPS[(state.i+1)%STOPS.length].place.split(' ')[0].toLowerCase();
+  el('prev').querySelector('.lbl').textContent = 'back';
+}
+window.addEventListener('keydown',e=>{
+  if(el('scrim').classList.contains('open')){ if(e.key==='Escape')closeModal(); return; }
+  if(e.key==='ArrowRight')go(1); if(e.key==='ArrowLeft')go(-1);
+});
+window.addEventListener('resize',()=>{ if(sceneGeo)centreOnMarker(); });
+
+/* ---------- modal ---------- */
+function openModal(){
+  const s=STOPS[state.i]; state.answered=false;
+  el('mKick').textContent=`STOP ${String(s.no).padStart(2,'0')} · ${state.collected.has(s.no)?'COLLECTED':'NEW'}`;
+  el('mDet').textContent=s.det; el('mPlace').textContent=s.place;
+  el('mSee').textContent=s.see; el('mMeans').textContent=s.means; el('mWhy').textContent=s.why;
+  el('mQ').textContent=s.q;
+  const wrap=el('mOpts'); wrap.innerHTML='';
+  s.opts.forEach((o,idx)=>{
+    const b=document.createElement('button'); b.className='opt'; b.textContent=o;
+    b.addEventListener('click',()=>answer(idx,b)); wrap.appendChild(b);
+  });
+  const fb=el('mFb'); fb.className='fb'; fb.textContent='';
+  const c=el('mCollect');
+  if(state.collected.has(s.no)){ c.className='collect done on'; c.textContent='✓ In your field notebook'; }
+  else { c.className='collect'; c.textContent='Add to field notebook'; }
+  el('scrim').classList.add('open');
+  el('mClose').focus();
+}
+function answer(idx,btn){
+  if(state.answered)return; state.answered=true;
+  const s=STOPS[state.i];
+  [...el('mOpts').children].forEach((b,bi)=>{ b.disabled=true;
+    if(bi===s.correct)b.classList.add('right'); if(bi===idx&&idx!==s.correct)b.classList.add('wrong'); });
+  const fb=el('mFb'); fb.textContent=s.fb; fb.classList.add('show');
+  if(!state.collected.has(s.no)){ const c=el('mCollect'); c.classList.add('on'); }
+}
+el('mCollect').addEventListener('click',()=>{
+  const s=STOPS[state.i];
+  if(!state.collected.has(s.no)){ state.collected.add(s.no); refresh(); }
+  const c=el('mCollect'); c.className='collect done on'; c.textContent='✓ In your field notebook';
+  el('pDet').textContent='✓ '+s.det+' — collected'; el('pDet').className='det done';
+  if(markerBtn){ markerBtn.classList.add('done'); markerBtn.querySelector('.pin').textContent='✓'; markerBtn.querySelector('.stalk'); }
+  setTimeout(()=>{ closeModal(); if(state.collected.size===STOPS.length) el('win').classList.add('open'); }, 550);
+});
 function closeModal(){ el('scrim').classList.remove('open'); }
-el('mClose').addEventListener('click', closeModal);
-el('scrim').addEventListener('click', e => { if(e.target === el('scrim')) closeModal(); });
+el('mClose').addEventListener('click',closeModal);
+el('scrim').addEventListener('click',e=>{ if(e.target===el('scrim'))closeModal(); });
 
 /* ---------- rail / progress ---------- */
 function buildRail(){
-  const rail = el('rail'); rail.innerHTML = '';
-  STOPS.forEach((s, idx) => {
-    const b = document.createElement('button'); b.className = 'slot';
-    b.innerHTML = `<span class="chk">✓</span><div class="sn">STOP ${String(s.no).padStart(2,'0')}</div><div class="dn">${s.det}</div>`;
-    b.addEventListener('click', () => { state.i = idx; state.pan = 0; renderScene(); refresh(); sceneEl.scrollIntoView({behavior:'smooth',block:'center'}); });
+  const rail=el('rail'); rail.innerHTML='';
+  STOPS.forEach((s,idx)=>{
+    const b=document.createElement('button'); b.className='slot';
+    b.innerHTML=`<span class="chk">✓</span><div class="sn">STOP ${String(s.no).padStart(2,'0')}</div><div class="dn">${s.det}</div>`;
+    b.addEventListener('click',()=>{ state.i=idx; state.pan=0; renderScene(); refresh(); sceneEl.scrollIntoView({behavior:'smooth',block:'center'}); });
     rail.appendChild(b);
   });
 }
-
 function refresh(){
-  const n = state.collected.size;
-  el('cCount').textContent = String(n).padStart(2,'0');
-  el('cFill').style.width = (n / STOPS.length * 100) + '%';
-  [...el('rail').children].forEach((b, idx) => {
+  const n=state.collected.size;
+  el('cCount').textContent=String(n).padStart(2,'0');
+  el('cFill').style.width=(n/STOPS.length*100)+'%';
+  [...el('rail').children].forEach((b,idx)=>{
     b.classList.toggle('done', state.collected.has(STOPS[idx].no));
-    b.classList.toggle('here', idx === state.i);
+    b.classList.toggle('here', idx===state.i);
   });
 }
 
 /* reset + replay */
-el('reset').addEventListener('click', () => {
-  state.collected.clear();
-  state.i = 0;
-  state.pan = 0;
-  renderScene();
-  refresh();
-});
-el('winClose').addEventListener('click', () => { el('win').classList.remove('open'); });
+el('reset').addEventListener('click',()=>{ state.collected.clear(); state.i=0; renderScene(); refresh(); });
+el('winClose').addEventListener('click',()=>{ el('win').classList.remove('open'); state.collected.clear(); state.i=0; renderScene(); refresh(); });
 
-/* ---------- NOTEBOOK PRINT-TO-PDF GENERATOR DOCK ---------- */
-document.getElementById('downloadPdf').addEventListener('click', () => {
-  const printWindow = window.open('', '_blank');
-  let notebookContent = '';
-  
-  STOPS.forEach(s => {
-    notebookContent += `
-      <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #e0d6c1; page-break-inside: avoid;">
-        <h3 style="margin: 0 0 5px 0; color: #1c9d88; font-size: 16px;">STOP ${String(s.no).padStart(2, '0')}: ${s.det}</h3>
-        <p style="margin: 2px 0 10px 0; font-size: 13px; color: #666;"><strong>Location Observation Site:</strong> ${s.place}</p>
-        <p style="margin: 6px 0;"><strong>What You Observed:</strong> ${s.see}</p>
-        <p style="margin: 6px 0;"><strong>The Determinant Systemic Meaning:</strong> ${s.means}</p>
-        <p style="margin: 6px 0; color: #4b5674; font-style: italic;"><strong>Why It Matters for Substance Use Patterns:</strong> ${s.why}</p>
-        <div style="background: #fbf7ee; border: 1px solid #e0d6c1; padding: 12px; border-radius: 8px; margin-top: 12px;">
-          <p style="margin: 0 0 4px 0; font-weight: bold; font-size: 13px; color: #1b2440;">Review Concept Question:</p>
-          <p style="margin: 0 0 6px 0; font-size: 13px;"><em>${s.q}</em></p>
-          <p style="margin: 0; color: #1c9d88; font-weight: bold; font-size: 12px;">✓ Verified Field Notebook Entry Captured Successfully</p>
-        </div>
-      </div>
-    `;
-  });
-
-  printWindow.document.write(`
-    <!doctype html>
-    <html>
-    <head>
-      <title>SDOH City Walk - Completed Field Notebook</title>
-      <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: #1b2440; padding: 40px; max-width: 800px; margin: 0 auto; line-height: 1.5; background: #fff; }
-        h1 { margin: 0 0 5px 0; color: #1b2440; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; }
-        .meta-header { font-size: 13px; color: #4b5674; margin-bottom: 30px; border-bottom: 2px solid #1b2440; padding-bottom: 12px; }
-      </style>
-    </head>
-    <body>
-      <h1>SDOH City Walk: Field Notebook Summary</h1>
-      <div class="meta-header">
-        <p style="margin: 2px 0;"><strong>Course Activity:</strong> Canvas Virtual Field Simulation Log</p>
-        <p style="margin: 2px 0;"><strong>Status:</strong> 12 / 12 Core Social Determinants Mapped & Reviewed</p>
-      </div>
-      ${notebookContent}
-      <script>
-        window.onload = function() {
-          window.print();
-        };
-      <\/script>
-    </body>
-    </html>
-  `);
-  printWindow.document.close();
-});
-
-// Initialize application state
-window.addEventListener('DOMContentLoaded', () => {
-  buildRail();
-  renderScene();
-  refresh();
-});
+/* init */
+buildRail(); renderScene(); refresh();
 </script>
 </body>
 </html>
